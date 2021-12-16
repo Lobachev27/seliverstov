@@ -1,0 +1,22 @@
+<div id="@@context.id" class="programs-list_wrapper">
+  @@for (var i = 0; i < context.arr.length; i++) {
+  <div class="programs_box">
+    <div class="programs_box_img_wrapper">
+      <img class="programs_box_img" src="`+context.arr[i].img+`">
+      <a class="programs_box_img_link" href="`+context.arr[i].link+`"></a>
+      <a class="programs_box_img_more" href="`+context.arr[i].link+`">Подробнее о программе</a>
+    </div>
+    <div class="programs_box_info">
+      <a class="programs_box_caption" href="`+context.arr[i].link+`">`+context.arr[i].caption+`</a>
+      <div class="programs_box_time">`+context.arr[i].time+`</div>
+      <ul class="programs_box_list">
+        `+context.arr[i].list+`
+      </ul>
+      <div class="programs_box_row">
+        <div class="programs_box_price">`+context.arr[i].price+`</div>
+        <button class="btn btn-basket"></button>
+      </div>
+    </div>
+  </div>
+  }
+</div>

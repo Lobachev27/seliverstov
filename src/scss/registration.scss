@@ -1,0 +1,343 @@
+@import "partials/params";
+@import "partials/mixins";
+
+/*Форма регистрации*/
+
+.registration{
+  position: fixed;
+  background-color: #1E1E1E;
+  width: 1000px;
+  height: 100vh;
+  top: 0;
+  left: 270px;
+  padding: 40px 100px;
+  z-index: 101;
+  transform: translateX(-100%);
+  transition: 1s;
+  &.active{
+    transform: translateX(0);
+    transition: 1s;
+  }
+  & .container{
+    display: none;
+  }
+  &_caption{
+    font-size: 36px;
+    font-weight: 900;
+    color: $color-orange;
+  }
+  &_description{
+    font-size: 13px;
+    color: #707070;
+    margin-top: 4px;
+    &_mobile{
+      display: none;
+      font-size: 13px;
+      color: #707070;
+      margin-top: 4px;
+    }
+  }
+  &_close{
+    position: absolute;
+    display: block;
+    background: url("../img/closed.svg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-self: end;
+    align-self: center;
+    width: 24px;
+    height: 24px;
+    top: 45px;
+    right: 45px;
+    opacity: 0.5;
+    transition: all 0.3s;
+    z-index: 2;
+    &:hover {
+      opacity: 1;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+  }
+  &_form{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 120px;
+    margin-top: 20px;
+  }
+  &_left{}
+  &_right{}
+  &_row{
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 15px;
+    &.two{
+      grid-template-columns: 1fr 1fr;
+    }
+    &.three{
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  &_text{
+    font-size: 13px;
+    color: $text-color-white;
+    margin: 35px 0 15px;
+  }
+  &_next{
+    display: none;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    outline: none;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    color: $text-color-white;
+    background-color: transparent;
+    border: 2px solid $color-orange;
+    height: 50px;
+    width: 200px;
+    transition: 0.3s;
+    margin: 40px auto 0;
+    &:hover{
+      background-color: $color-orange;
+      transition: 0.3s;
+    }
+  }
+}
+
+@media screen and (max-width: 1499px) {
+  /*Форма регистрации (max-width: 1499px)*/
+
+  .registration{
+    width: 1000px;
+    left: 220px;
+    padding: 40px 100px;
+    &_caption{
+      font-size: 32px;
+    }
+    &_close{
+      width: 20px;
+      height: 20px;
+      top: 40px;
+      right: 40px;
+    }
+    &_form{
+      grid-column-gap: 100px;
+    }
+    &_left{}
+    &_right{}
+  }
+}
+
+@media screen and (max-width: 1249px) {
+  /*Форма регистрации (max-width: 1249px)*/
+
+  .registration{
+    width: calc(100vw - 220px);
+    left: 220px;
+    padding: 40px;
+    &_caption{
+      font-size: 28px;
+    }
+    &_form{
+      grid-column-gap: 60px;
+    }
+    &_left{}
+    &_right{}
+  }
+}
+
+@media screen and (max-width: 991px) {
+  /*Форма регистрации (max-width: 991px)*/
+
+  .registration{
+    width: 100vw;
+    left: 0;
+    padding: 40px;
+    z-index: 104;
+    &_caption{
+      font-size: 28px;
+    }
+    &_form{
+      grid-column-gap: 60px;
+    }
+    &_left{}
+    &_right{}
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /*Форма регистрации (max-width: 767px)*/
+
+  .registration{
+    padding: 20px 40px 40px;
+    & .container{
+      width: 100%;
+      padding: 0 0 20px;
+      margin: 0 auto;
+      height: max-content;
+      display: grid;
+      grid-template-columns: 56% 1fr;
+      align-items: center;
+      z-index: 1;
+    }
+    &_caption{
+      font-size: 28px;
+    }
+    &_description{
+      display: none;
+      &_mobile{
+        display: block;
+      }
+    }
+    &_close{
+      top: 35px;
+      right: 20px;
+    }
+    &_form{
+      position: relative;
+      display: block;
+      margin-left: -12px;
+      margin-right: -12px;
+    }
+    &_left{
+      padding: 0 12px;
+    }
+    &_right{
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: #1E1E1E;
+      width: 100%;
+      padding: 0 12px;
+      transform: translateX(-120%);
+      opacity: 0;
+      height: 100%;
+      z-index: 10;
+      transition: 1s;
+      &.active{
+        transform: translateX(0);
+        opacity: 1;
+        transition: 1s;
+      }
+    }
+    &_text{
+      margin: 25px 0 12px;
+    }
+    &_next{
+      display: flex;
+      font-size: 14px;
+      height: 40px;
+      width: 150px;
+      margin-top: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  /*Форма регистрации (max-width: 575px)*/
+
+  .registration{
+    padding: 20px 15px;
+    &_caption{
+      font-size: 24px;
+    }
+    &_close{
+      top: 32px;
+      right: 15px;
+    }
+    &_text{
+      margin: 15px 0 12px;
+    }
+    &_next{
+      margin-top: 20px;
+    }
+    & .checkbox_registration{
+      margin-top: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  /*Форма регистрации (max-width: 380px)*/
+
+  .registration{
+    padding: 20px 8px;
+    & .container{
+      grid-template-columns: 58% 1fr;
+      padding-bottom: 12px;
+    }
+    &_caption{
+      font-size: 22px;
+    }
+    &_close{
+      top: 32px;
+      right: 15px;
+    }
+    &_text{
+      margin: 15px 0 12px;
+    }
+    &_next{
+      margin-top: 20px;
+    }
+    &_row{
+      grid-column-gap: 14px;
+      grid-row-gap: 10px;
+    }
+    &_input{
+      margin-bottom: 0;
+    }
+    & .btn-registration{
+      margin-top: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  /*Форма регистрации (max-width: 350px)*/
+
+  .registration{
+    & .container{
+      padding-bottom: 10px;
+    }
+    &_caption{
+      font-size: 20px;
+    }
+    &_description{
+      &_mobile{
+        margin: 0;
+      }
+    }
+    &_close{
+      top: 32px;
+      right: 15px;
+    }
+    &_form{
+      margin-top: 15px;
+    }
+    &_text{
+      margin: 10px 0;
+    }
+    &_next{
+      margin-top: 15px;
+    }
+    &_input{
+      height: 30px;
+    }
+    & .checkbox_registration{
+      margin-top: 45px;
+    }
+    & .checkbox_registration_text{
+      font-size: 11px;
+    }
+    & .btn-registration{
+      margin-top: 30px;
+    }
+    & .inputDiv{
+      margin: 15px 0 40px;
+    }
+  }
+}

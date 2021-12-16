@@ -1,0 +1,448 @@
+@import "partials/params";
+@import "partials/mixins";
+
+/*Главный слайдер*/
+
+.intro{
+  position: relative;
+  &_video{
+    /*width: 100%;*/
+    height: 100%;
+    &_text{
+      display: none;
+    }
+  }
+  & .container{
+    position: absolute;
+    height: calc(100% - 210px);
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1500px;
+  }
+  &_info{}
+  &_caption{
+    font-family: 'Disolve-light';
+    font-weight: 300;
+    font-size: 150px;
+    text-transform: uppercase;
+    color: $text-color-white;
+    line-height: 1.2em;
+  }
+  &_description{
+    font-size: 15px;
+    color: $text-color-white;
+    line-height: 1.5em;
+    max-width: 500px;
+    margin-bottom: 55px;
+  }
+  &_coach{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    &_name{
+      font-size: 18px;
+      font-weight: 700;
+      color: $text-color-white;
+      text-align: right;
+    }
+    &_description{
+      font-size: 15px;
+      color: $text-color-white;
+      text-align: right;
+      max-width: 320px;
+      opacity: 0.5;
+      line-height: 1.5em;
+      margin-top: 10px;
+    }
+  }
+  & .swiper-slide{
+    height: 50vw;
+  }
+  & .swiper-pagination {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    text-align: center;
+    transition: 0.3s opacity;
+    height: auto;
+    width: 3px;
+    top: 0;
+    right: 0;
+    z-index: 10;
+  }
+  & .swiper-pagination-bullets {
+    height: max-content;
+    top: 120px;
+    left: calc(50% + 747px);
+    margin-right: 20px;
+    transform: translateY(0);
+  }
+  & .swiper-pagination-bullets
+  .swiper-pagination-bullet {
+    margin: 10px 0;
+    display: block;
+  }
+  & .swiper-pagination-clickable .swiper-pagination-bullet {
+    cursor: pointer;
+  }
+  & .swiper-pagination-bullet {
+    position: relative;
+    width: 2px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #fff;
+    opacity: 0.5;
+    outline: none;
+    transition: 0.3s;
+  }
+  & .swiper-pagination-bullet-active {
+    border: none;
+    width: 4px;
+    height: 90px;
+    opacity: 1;
+    background-color: #fff;
+    transition: 0.3s;
+  }
+  & .swiper_slide_name{
+    font-size: 12px;
+    font-weight: 500;
+    color: $text-color-white;
+    position: absolute;
+    left: 20px;
+    width: fit-content;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
+    opacity: 0.5;
+    outline: none;
+    transition: 0.3s;
+  }
+  & .swiper-pagination-bullet-active .swiper_slide_name{
+    font-size: 16px;
+    top: 7px;
+    opacity: 1;
+    outline: none;
+    transition: 0.3s;
+  }
+  &_request{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  /*Главный слайдер (max-width: 1919px)*/
+
+  .intro{
+    & .container{
+      height: calc(100% - 210px);
+      top: 120px;
+      width: 1170px;
+    }
+    &_caption{
+      font-size: 120px;
+    }
+    &_description{
+      font-size: 14px;
+      margin-bottom: 40px;
+    }
+    &_coach{
+      &_name{
+        font-size: 16px;
+      }
+      &_description{
+        font-size: 14px;
+        max-width: 320px;
+      }
+    }
+    & .swiper-slide{
+      height: 48vw;
+    }
+    & .swiper-pagination-bullets {
+      left: calc(50% + 547px);
+    }
+  }
+}
+
+@media screen and (max-width: 1499px) {
+  /*Главный слайдер (max-width: 1499px)*/
+
+  .intro{
+    & .container{
+      height: calc(100% - 160px);
+      top: 80px;
+      width: 960px;
+    }
+    &_caption{
+      font-size: 100px;
+    }
+    &_description{
+      font-size: 13px;
+      max-width: 400px;
+      margin-bottom: 30px;
+    }
+    &_coach{
+      &_name{
+        font-size: 15px;
+      }
+      &_description{
+        font-size: 13px;
+        max-width: 280px;
+      }
+    }
+    & .swiper-slide{
+      height: 48vw;
+    }
+    & .swiper-pagination-bullets {
+      top: 80px;
+      left: calc(50% + 440px);
+    }
+    & .swiper-pagination-bullet-active {
+      height: 60px;
+    }
+    & .swiper-pagination-bullet-active .swiper_slide_name{
+      font-size: 15px;
+      top: 6px;
+    }
+  }
+}
+
+@media screen and (max-width: 1249px) {
+  /*Главный слайдер (max-width: 1249px)*/
+
+  .intro{
+    & .container{
+      height: calc(100% - 80px);
+      top: 50px;
+      width: 720px;
+    }
+    &_caption{
+      font-size: 80px;
+    }
+    &_description{
+      font-size: 12px;
+      max-width: 370px;
+      margin-bottom: 20px;
+    }
+    &_coach{
+      &_name{
+        font-size: 14px;
+      }
+      &_description{
+        font-size: 12px;
+        max-width: 280px;
+      }
+    }
+    & .swiper-slide{
+      height: 48vw;
+    }
+    & .swiper-pagination-bullets {
+      top: 50px;
+      left: calc(50% + 320px);
+    }
+    & .swiper-pagination-bullet-active {
+      height: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  /*Главный слайдер (max-width: 991px)*/
+
+  .intro{
+    position: relative;
+    background-color: #1E1E1E;
+    height: 100vh;
+    & .swiper-slide{
+      overflow: hidden;
+    }
+    & .container{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: calc(50vh - 64px);
+      top: 0;
+      left: initial;
+      transform: translateX(0);
+      width: 100%;
+      max-width: 720px;
+      padding: 0 8px;
+    }
+    &_video{
+      height: 50vh;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      &_text{
+        display: block;
+        position: absolute;
+        font-size: 12px;
+        color: #fff;
+        top: 25%;
+        max-width: 250px;
+        transform: translateY(-50%) rotate(-90deg);
+        opacity: 0.6;
+        z-index: 2;
+        &.left{
+          left: calc(50% - 470px);
+        }
+        &.right{
+          right: calc(50% - 460px);
+        }
+      }
+    }
+    &_caption{
+      font-size: 70px;
+    }
+    &_description{
+      font-size: 12px;
+      max-width: 470px;
+      margin: 10px 0 30px;
+    }
+    &_coach{
+      display: none;
+    }
+    & .swiper-container{
+      height: 100%;
+    }
+    & .swiper-slide{
+      background-color: #1E1E1E;
+      height: 100%;
+    }
+    & .swiper-pagination {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      text-align: center;
+      transition: 0.3s opacity;
+      height: 3px;
+      width: max-content;
+      top: 0;
+      right: 0;
+      transform: translateX(-50%);
+      z-index: 10;
+    }
+    & .swiper-pagination-bullets {
+      top: 47vh;
+      left: 50%;
+      margin: 0;
+    }
+    & .swiper-pagination-bullets
+    .swiper-pagination-bullet {
+      margin: 0 5px;
+    }
+    & .swiper-pagination-bullet {
+      width: 10px;
+      height: 2px;
+    }
+    & .swiper-pagination-bullet-active {
+      width: 50px;
+      height: 4px;
+      background-color: $color-orange;
+    }
+    & .swiper_slide_name{
+      display: none;
+    }
+    &_request{
+      position: absolute;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
+      padding: 0;
+      bottom: 0;
+      z-index: 10;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /*Главный слайдер (max-width: 767px)*/
+
+  .intro{
+    & .container{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: calc(50vh - 64px);
+      top: 0;
+      left: initial;
+      transform: translateX(0);
+      width: 100%;
+      max-width: 720px;
+      padding: 0 8px;
+    }
+    &_video{
+      height: 50vh;
+      min-height: 330px;
+      &_text{
+        top: calc(25vh + 30px);
+        &.left{
+          left: -100px;
+        }
+        &.right{
+          right: -90px;
+        }
+      }
+    }
+    &_caption{
+      font-size: 60px;
+    }
+    &_description{
+      max-width: 420px;
+    }
+    & .swiper-pagination-bullets {
+      top: 47vh;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  /*Главный слайдер (max-width: 575px)*/
+
+  .intro{
+    &_caption{
+      font-size: 55px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /*Главный слайдер (max-width: 480px)*/
+
+  .intro{
+    &_caption{
+      font-size: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  /*Главный слайдер (max-width: 380px)*/
+
+  .intro{
+    & .container{
+      height: calc(100vh - 380px);
+    }
+    &_video{
+      height: 50vh;
+      min-height: 330px;
+      &_text{
+        top: 190px;
+      }
+    }
+    &_caption{
+      font-size: 45px;
+    }
+    &_description{
+      line-height: 1.3em;
+      margin: 0 0 20px;
+    }
+  }
+}

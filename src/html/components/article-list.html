@@ -1,0 +1,29 @@
+<div id="@@context.id" class="article-list_wrapper">
+  @@for (var i = 0; i < context.arr.length; i++) {
+  <div class="article-list_box `+context.arr[i].class+`">
+    <div class="article-list_img_wrapper">
+      <img class="article-list_img" src="`+context.arr[i].img+`">
+      <div class="article-list_marker `+context.arr[i].markerClass+`"></div>
+      <a class="article-list_img_link" href="`+context.arr[i].link+`"></a>
+    </div>
+    <div class="article-list_info">
+      <div class="article-list_info_row">
+        <div class="article-list_date">`+context.arr[i].date+`</div>
+        <div class="article-list_type">`+context.arr[i].type+`</div>
+      </div>
+      <a class="article-list_caption" href="`+context.arr[i].link+`">`+context.arr[i].caption+`</a>
+      <div class="article-list_description">`+context.arr[i].description+`</div>
+      <a class="article-list_more" href="`+context.arr[i].link+`">Читать дальше</a>
+    </div>
+  </div>
+  }
+  <nav class="page_nav">
+    <a class="page_nav_prev" href="javascript:void(0);"><</a>
+    <a class="page_nav_number active" href="javascript:void(0);">1</a>
+    <a class="page_nav_number" href="javascript:void(0);">2</a>
+    <a class="page_nav_number" href="javascript:void(0);">3</a>
+    <a class="page_nav_number" href="javascript:void(0);">...</a>
+    <a class="page_nav_number" href="javascript:void(0);">16</a>
+    <a class="page_nav_next" href="javascript:void(0);">></a>
+  </nav>
+</div>

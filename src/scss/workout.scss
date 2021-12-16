@@ -1,0 +1,378 @@
+@import "partials/params";
+@import "partials/mixins";
+
+/*Блок тренировки и обучение*/
+
+.workout{
+  position: relative;
+  margin: 90px 0 45px;
+  &_row{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+  }
+  &_wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &_slider{
+    position: relative;
+    width: 935px;
+    margin-top: 45px;
+    & .swiper-container{
+      position: relative;
+      padding: 0 15px;
+    }
+    & .swiper-button-next,
+    & .swiper-button-prev{
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      outline: none;
+      background: none;
+      background-color: #fff;
+      border: 1px solid #E2E2E2;
+      color: #E2E2E2;
+      top: 50%;
+      transition: all 0.3s;
+      &:hover{
+        color: #000;
+        transition: all 0.3s;
+      }
+      &:before{
+        content: '';
+        font-family: 'FontAwesome';
+        font-size: 22px;
+        font-weight: 900;
+        position: absolute;
+        top: 50%;
+      }
+    }
+    & .swiper-button-next{
+      right: -3px;
+      &:before{
+        content: '\f105';
+        right: 46%;
+        transform: translate(50%, -50%);
+      }
+    }
+    & .swiper-button-prev{
+      left: -3px;
+      &:before{
+        content: '\f104';
+        left: 46%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  &_box{
+    position: relative;
+    width: 100%;
+    height: 460px;
+    border: 15px solid #E2E2E2;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.3s;
+    &:hover{
+      border: 15px solid $color-orange;
+      transition: 0.3s;
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, transparent 80%);
+    }
+  }
+  &_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  &_caption{
+    position: absolute;
+    font-size: 20px;
+    font-weight: 900;
+    color: $text-color-white;
+    line-height: 1.3em;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    z-index: 2;
+  }
+  &_number{
+    position: absolute;
+    font-family: 'Disolve-light';
+    font-size: 36px;
+    color: $text-color-white;
+    bottom: 0;
+    right: 0;
+    padding: 5px 15px;
+    z-index: 2;
+  }
+  &_link{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+  }
+  &_form{
+    position: relative;
+    width: 400px;
+    background-color: #fff;
+    border: 1px solid #E2E2E2;
+    border-radius: 12px;
+    padding: 40px 55px;
+    z-index: 1;
+    overflow: hidden;
+    &:before{
+      content: '';
+      background: url("../img/triangle.png") no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      width: 379px;
+      height: 376px;
+      top: 60px;
+      right: -80px;
+      opacity: 1;
+      z-index: -1;
+      transition: opacity 0.3s;
+    }
+    &_caption{
+      position: relative;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 35px;
+      &:after{
+        content: '\f0e0';
+        font-family: 'FontAwesome';
+        font-size: 16px;
+        color: $color-orange;
+        margin-left: 15px;
+      }
+    }
+    &_text{
+      font-size: 15px;
+      font-weight: 300;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  /*Блок тренировки и обучение (max-width: 1919px)*/
+
+  .workout{
+    margin: 80px 0;
+    &_row{
+      padding: 15px 0;
+    }
+    &_slider{
+      width: 830px;
+      margin-top: 35px;
+      & .swiper-container{
+        padding: 0 15px;
+      }
+    }
+    &_box{
+      height: 460px;
+    }
+    &_caption{
+      font-size: 18px;
+      font-weight: 700;
+      padding: 15px;
+    }
+    &_number{
+      font-size: 32px;
+    }
+    &_form{
+      width: 320px;
+      padding: 40px 35px;
+      &_caption{
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
+      &_text{
+        font-size: 13px;
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1499px) {
+  /*Блок тренировки и обучение (max-width: 1499px)*/
+
+  .workout{
+    margin: 60px 0;
+    &_row{
+      padding: 15px 0;
+    }
+    &_slider{
+      width: 600px;
+      margin-top: 20px;
+      & .swiper-container{
+        padding: 0 15px;
+      }
+    }
+    &_box{
+      height: 441px;
+    }
+    &_caption{
+      font-size: 18px;
+      padding: 15px;
+    }
+    &_number{
+      font-size: 32px;
+    }
+    &_form{
+      width: 340px;
+      padding: 30px 25px;
+      &_caption{
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1249px) {
+  /*Блок тренировки и обучение (max-width: 1249px)*/
+
+  .workout{
+    &_row{
+      padding: 15px 0;
+    }
+    &_wrapper{
+      display: block;
+    }
+    &_slider{
+      width: 100%;
+      margin: 20px 0 40px;
+      & .swiper-container{
+        padding: 0 15px;
+      }
+    }
+    &_box{
+      height: 430px;
+    }
+    &_caption{
+      font-size: 18px;
+      padding: 15px;
+    }
+    &_number{
+      font-size: 32px;
+    }
+    &_form{
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 20px;
+      padding: 30px 25px;
+      &:before{
+        top: -80px;
+        right: -80px;
+        width: 500px;
+        height: 500px;
+      }
+      &_caption{
+        font-size: 18px;
+        grid-column: 1/3;
+        margin-bottom: 20px;
+      }
+      &_text{
+        &:nth-child(2){
+          grid-column: 1/2;
+          grid-row: 2/3;
+        }
+        &:nth-child(4){
+          grid-column: 2/3;
+          grid-row: 2/3;
+        }
+        &:nth-child(6){
+          grid-column: 1/3;
+          grid-row: 4/5;
+        }
+      }
+      & .input{
+        &:nth-child(3){
+          grid-column: 1/2;
+          grid-row: 3/4;
+        }
+        &:nth-child(5){
+          grid-column: 2/3;
+          grid-row: 3/4;
+        }
+      }
+      & .textarea{
+        grid-column: 1/3;
+      }
+      & .checkbox{
+        grid-column: 1/3;
+      }
+      & .btn-form{
+        grid-column: 1/3;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /*Блок тренировки и обучение (max-width: 767px)*/
+
+  .workout{
+    &_box{
+      height: 400px;
+    }
+    &_caption{
+      font-size: 16px;
+      padding: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  /*Блок тренировки и обучение (max-width: 575px)*/
+
+  .workout{
+    &_slider{
+      width: 570px;
+      margin: 20px 0 40px;
+      & .swiper-container{
+        padding: 0 15px;
+      }
+      & .swiper-button-next{
+        right: initial;
+        left: 242px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /*Блок тренировки и обучение (max-width: 480px)*/
+
+  .workout{
+    &_form{
+      display: block;
+      &:before{
+        top: 20px;
+        right: -50px;
+        width: 400px;
+        height: 400px;
+      }
+    }
+  }
+}

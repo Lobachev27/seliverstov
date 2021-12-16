@@ -1,0 +1,394 @@
+@import "partials/params";
+@import "partials/mixins";
+
+/*Блок уникальность программ*/
+
+.advantages{
+  position: relative;
+  margin: 110px 0 80px;
+  &_caption{
+    position: relative;
+    font-size: 25px;
+    font-weight: 500;
+    max-width: 500px;
+    margin-left: 54px;
+    &:before{
+      content: '';
+      position: absolute;
+      left: -54px;
+      top: -18px;
+      background: url("../img/advantages-icon.svg") no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 37px;
+      height: 37px;
+    }
+  }
+  &_list{
+    position: relative;
+    margin-top: 35px;
+    & .swiper-container{
+      padding: 30px 30px 70px;
+      margin: 0 -30px;
+    }
+    & .swiper-wrapper{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      justify-items: center;
+      align-items: center;
+    }
+    & .swiper-pagination{
+      display: none;
+    }
+  }
+  &_box{
+    position: relative;
+    width: 100%;
+    height: 367px;
+    margin-left: -1px;
+    &_wrapper{
+      position: absolute;
+      background-color: #fff;
+      border: 1px solid #E2E2E2;
+      width: calc(100% + 1px);
+      height: 100%;
+      padding: 30px;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      overflow: hidden;
+      &:hover{
+        top: 50%;
+        left: 50%;
+        width: calc(100% + 20px);
+        height: calc(100% + 50px);
+        transform: translate(-50%, -50%);
+        transition: 0.3s;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        padding: 50px 40px;
+        z-index: 20;
+        & .btn-advantages-box{
+          opacity: 1;
+          transition: opacity 0.3s;
+        }
+        & .advantages_box_bg{
+          opacity: 1;
+          transition: opacity 0.3s;
+        }
+        & .advantages_box_circle_wrapper{
+          opacity: 0;
+          transition: opacity 0.3s;
+        }
+      }
+    }
+    &_circle{
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 1px solid #E2E2E2;
+      &_wrapper{
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 30px;
+        right: 30px;
+        opacity: 1;
+        transition: opacity 0.3s;
+      }
+      &.one{
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      &.two{
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      &.three{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+      &.active{
+        border: 1px solid #FA9313;
+      }
+    }
+    &_bg{
+      position: absolute;
+      width: 349px;
+      height: 346px;
+      object-fit: cover;
+      object-position: center;
+      top: 0;
+      right: -50px;
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 0.3s;
+    }
+    &_number{
+      font-family: 'Disolve-light';
+      font-size: 60px;
+    }
+    &_caption{
+      font-size: 22px;
+      font-weight: 700;
+      margin-top: 10px;
+    }
+    &_description{
+      font-size: 14px;
+      color: #646464;
+      line-height: 1.4em;
+      margin: 15px 0 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  /*Блок уникальность программ (max-width: 1919px)*/
+
+  .advantages{
+    margin: 80px 0 60px;
+    &_caption{
+      font-size: 22px;
+      max-width: 420px;
+      margin-left: 40px;
+      &:before{
+        left: -40px;
+        width: 30px;
+        height: 30px;
+      }
+    }
+    &_list{
+      margin-top: 35px;
+    }
+    &_box{
+      &_wrapper{
+        padding: 30px;
+        &:hover{
+          padding: 50px 40px;
+        }
+      }
+      &_circle{
+        &_wrapper{
+          top: 30px;
+          right: 30px;
+        }
+      }
+      &_number{
+        font-size: 50px;
+      }
+      &_caption{
+        font-size: 20px;
+      }
+      &_description{
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1499px) {
+  /*Блок уникальность программ (max-width: 1499px)*/
+
+  .advantages{
+    margin: 60px 0 0;
+    &_caption{
+      font-size: 18px;
+      max-width: 350px;
+      margin-left: 55px;
+      &:before{
+        top: -1px;
+        left: -55px;
+        width: 40px;
+        height: 40px;
+      }
+    }
+    &_list{
+      margin-top: 10px;
+    }
+    &_box{
+      height: 310px;
+      &_wrapper{
+        padding: 20px;
+        &:hover{
+          padding: 40px 30px;
+        }
+      }
+      &_circle{
+        &_wrapper{
+          top: 20px;
+          right: 20px;
+        }
+      }
+      &_number{
+        font-size: 40px;
+      }
+      &_caption{
+        font-size: 18px;
+      }
+      &_description{
+        font-size: 13px;
+        margin: 10px 0 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1249px) {
+  /*Блок уникальность программ (max-width: 1249px)*/
+
+  .advantages{
+    margin: 60px 0 20px;
+    &_list{
+      margin-top: 10px;
+      & .swiper-container{
+        padding: 30px 15px 70px;
+        margin: 0 -15px;
+      }
+      & .swiper-wrapper{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+      }
+      & .swiper-pagination{
+        display: block;
+      }
+      & .swiper-container-horizontal>.swiper-pagination-bullets{
+        position: absolute;
+        bottom: 40px;
+        line-height: 1em;
+        text-align: center;
+        height: 4px;
+        padding: 0 15px;
+      }
+      & .swiper-container-horizontal .swiper-pagination-bullet {
+        position: relative;
+        width: 10px;
+        height: 2px;
+        display: inline-block;
+        border-radius: 5px;
+        background-color: #A2A2A2;
+        outline: none;
+        transition: 0.3s;
+        margin: 0 5px;
+      }
+      & .swiper-container-horizontal .swiper-pagination-bullet-active {
+        border: none;
+        width: 50px;
+        height: 4px;
+        opacity: 1;
+        background-color: $color-orange;
+        transition: 0.3s;
+      }
+    }
+    &_box{
+      height: 270px;
+      margin-left: 0;
+      &_wrapper{
+        padding: 20px;
+        &:hover{
+          padding: 40px 20px;
+          width: 100%;
+        }
+      }
+      &_circle{
+        &_wrapper{
+          top: 20px;
+          right: 20px;
+        }
+      }
+      &_number{
+        font-size: 40px;
+      }
+      &_caption{
+        font-size: 18px;
+      }
+      &_description{
+        font-size: 13px;
+        margin: 10px 0 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /*Блок уникальность программ (max-width: 767px)*/
+
+  .advantages{
+    margin: 60px 0 40px;
+    &_caption{
+      font-size: 16px;
+      max-width: calc(100% - 250px);
+      margin-left: 46px;
+      &:before{
+        width: 36px;
+        height: 36px;
+        left: -46px;
+      }
+    }
+    &_list{
+      margin-top: 10px;
+      & .swiper-container{
+        padding: 20px 15px 40px;
+      }
+      & .swiper-container-horizontal>.swiper-pagination-bullets{
+        bottom: 15px;
+      }
+    }
+    &_box{
+      height: 300px;
+      margin-left: -1px;
+      &_wrapper{
+        position: relative;
+        width: calc(100% + 1px);
+        padding: 20px;
+        &:hover{
+          position: relative;
+          padding: 20px;
+          width: calc(100% + 1px);
+          height: 100%;
+          top: 0;
+          left: 0;
+          transform: translate(0%, 0%);
+        }
+        & .btn-advantages-box{
+          opacity: 1;
+          transition: opacity 0.3s;
+        }
+        & .advantages_box_bg{
+          opacity: 1;
+          transition: opacity 0.3s;
+        }
+        & .advantages_box_circle_wrapper{
+          opacity: 0;
+          transition: opacity 0.3s;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  /*Блок уникальность программ (max-width: 575px)*/
+
+  .advantages{
+    &_caption{
+      max-width: 100%;
+    }
+    &_box{
+      height: 280px;
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  /*Блок уникальность программ (max-width: 380px)*/
+
+  .advantages{
+    &_box{
+      height: 300px;
+    }
+  }
+}

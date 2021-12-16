@@ -1,0 +1,578 @@
+@import "partials/params";
+@import "partials/mixins";
+
+/*Header*/
+
+.header{
+  display: none;
+}
+
+/*Боковое меню*/
+
+.sidebar{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F5F5F5;
+  width: 270px;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  padding: 25px 35px 60px;
+  z-index: 102;
+  & .container{
+    display: none;
+  }
+  &_logo{
+    &_img{
+      width: 98px;
+      height: 134px;
+      transition: all 0.5s;
+      &:hover{
+        transform: scale(0.8);
+        transition: all 0.5s;
+      }
+    }
+    &_link{
+      display: block;
+      cursor: pointer;
+    }
+  }
+  &_nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 35%;
+    &_link{
+      position: relative;
+      font-size: 15px;
+      margin: 10px 0;
+      transition: 0.3s;
+      &:hover{
+        color: $color-orange-two;
+        transition: 0.3s;
+      }
+      &.active{
+        &:before{
+          content: '';
+          position: absolute;
+          width: 25px;
+          height: 2px;
+          background-color: $color-orange-two;
+          border-radius: 2px;
+          left: 50%;
+          bottom: -12px;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+  &_basket{
+    position: relative;
+    &:hover{
+      & .sidebar_basket_count{
+        background-color: $color-orange-two;
+        transition: 0.3s;
+      }
+    }
+    &_text{
+      font-size: 13px;
+      color: #707070;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    &_img{
+      position: relative;
+      background: url("../img/shopping-cart.svg") no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 30px;
+      height: 27px;
+      left: 45%;
+      transform: translateX(-50%);
+    }
+    &_count{
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3px;
+      top: 0;
+      right: 0;
+      transform: translate(50%, -50%);
+      transition: all 0.3s;
+      background-color: $color-orange;
+      border-radius: 50%;
+      width: 20px;
+      min-width: max-content;
+      height: 20px;
+      color: $text-color-main;
+      font-size: 15px;
+      font-weight: 700;
+    }
+    &_price{
+      display: none;
+    }
+    &_link{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 20;
+    }
+  }
+  &_request{
+    &_text{
+      font-size: 13px;
+      color: #707070;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+  &_social{
+    width: 200px;
+    &_text{
+      font-size: 13px;
+      color: #707070;
+      text-align: center;
+    }
+    &_list{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 30px;
+    }
+    &_item{
+      height: 18px;
+      transition: 0.3s;
+      &:hover{
+        transition: 0.3s;
+      }
+      &.vk{
+        background: url("./../img/vk.svg") no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 30px;
+        &:hover{
+          background: url("./../img/vk-hover.svg") no-repeat;
+          background-position: center;
+          background-size: cover;
+        }
+      }
+      &.facebook{
+        background: url("./../img/facebook.svg") no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 18px;
+        &:hover{
+          background: url("./../img/facebook-hover.svg") no-repeat;
+          background-position: center;
+          background-size: cover;
+        }
+      }
+      &.instagram{
+        background: url("./../img/instagram.svg") no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 18px;
+        &:hover{
+          background: url("./../img/instagram-hover.svg") no-repeat;
+          background-position: center;
+          background-size: cover;
+        }
+      }
+      &.youtube{
+        background: url("./../img/youtube.svg") no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 26px;
+        &:hover{
+          background: url("./../img/youtube-hover.svg") no-repeat;
+          background-position: center;
+          background-size: cover;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1499px) {
+  /*Боковое меню (max-width: 1499px)*/
+
+  .sidebar{
+    width: 220px;
+    padding: 20px 20px 40px;
+    &_logo{
+      &_img{
+        width: 86px;
+        height: 110px;
+      }
+    }
+    &_nav{
+      min-height: 35%;
+      &_link{
+        font-size: 14px;
+        margin: 10px 0;
+        &.active{
+          &:before{
+            bottom: -10px;
+          }
+        }
+      }
+    }
+    &_basket{
+      &_text{
+        font-size: 12px;
+      }
+      &_img{
+        width: 30px;
+        height: 27px;
+      }
+      &_count{
+        padding: 3px;
+        width: 18px;
+        height: 18px;
+        font-size: 14px;
+      }
+    }
+    &_request{
+      &_text{
+        font-size: 12px;
+        margin-bottom: 20px;
+      }
+    }
+    &_social{
+      width: 180px;
+      &_text{
+        font-size: 12px;
+      }
+      &_list{
+        margin-top: 25px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  /*Header (max-width: 991px)*/
+
+  .header{
+    position: relative;
+    display: block;
+    width: 100%;
+    background-color: #1E1E1E;
+    padding: 20px 0;
+    z-index: 100;
+    &.main-page{
+      position: absolute;
+      background-color: transparent;
+      top: 0;
+      left: 0;
+    }
+    & .container{
+      width: 100%;
+      max-width: 720px;
+      padding: 0 8px;
+      margin: 0 auto;
+      height: 42px;
+      display: grid;
+      grid-template-columns: 54% 1fr 50px;
+      align-items: center;
+    }
+    &_logo{
+      &_link{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      &_text{
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.5em;
+        color: #fff;
+        max-width: 90px;
+        transition: all 0.5s;
+        &:hover{
+          transform: scale(0.8);
+          transition: all 0.5s;
+        }
+      }
+      &_img{
+        width: 42px;
+        height: 42px;
+        transition: all 0.5s;
+        &:hover{
+          transform: scale(0.8);
+          transition: all 0.5s;
+        }
+      }
+    }
+    &_basket{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-self: end;
+      width: 42px;
+      height: 42px;
+      margin-right: 30px;
+      &:hover{
+        & .header_basket_count{
+          background-color: $color-orange-two;
+          transition: 0.3s;
+        }
+      }
+      &_img{
+        position: relative;
+        background: url("../img/shopping-cart-white.svg") no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 24px;
+        height: 22px;
+      }
+      &_count{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3px;
+        top: 0;
+        right: 0;
+        transform: translate(50%, -50%);
+        transition: all 0.3s;
+        background-color: $color-orange;
+        border-radius: 50%;
+        width: 16px;
+        min-width: max-content;
+        height: 16px;
+        color: $text-color-main;
+        font-size: 12px;
+        font-weight: 700;
+      }
+      &_link{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 20;
+      }
+    }
+    &_hamburger{
+      display: block;
+      background: url("../img/hamburger.svg") no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 20px;
+      height: 20px;
+      justify-self: center;
+      transition: all 0.3s;
+      &:hover{
+        background: url("../img/hamburger-hover.svg") no-repeat;
+        background-position: center;
+        background-size: cover;
+        transition: all 0.3s;
+        cursor: pointer;
+      }
+    }
+    &_close{
+      position: relative;
+      display: block;
+      background: url("../img/closed.svg") no-repeat;
+      background-size: cover;
+      background-position: center;
+      justify-self: end;
+      align-self: center;
+      margin-right: 15px;
+      width: 20px;
+      height: 20px;
+      opacity: 0.5;
+      transition: all 0.3s;
+      &:hover {
+        opacity: 1;
+        transition: all 0.3s;
+        cursor: pointer;
+      }
+    }
+  }
+
+  /*Боковое меню (max-width: 991px)*/
+
+  .sidebar{
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    background-color: #1E1E1E;
+    padding: 20px 0 0;
+    transition: 1s;
+    &.active{
+      left: 0;
+      transition: 1s;
+    }
+    & .container{
+      width: 100%;
+      max-width: 720px;
+      padding: 0 8px;
+      margin: 0 auto;
+      height: 42px;
+      display: grid;
+      grid-template-columns: 54% 1fr;
+      align-items: center;
+    }
+    &_logo{
+      display: none;
+      &_img{
+        width: 86px;
+        height: 110px;
+      }
+    }
+    &_nav{
+      min-height: 35%;
+      &_link{
+        font-size: 22px;
+        font-weight: 300;
+        color: #fff;
+        margin: 10px 0;
+        &:hover{
+          color: $color-orange;
+        }
+        &.active{
+          &:before{
+            display: none;
+          }
+        }
+      }
+    }
+    &_basket{
+      order: 2;
+      &_text{
+        font-size: 12px;
+        margin-bottom: 15px;
+      }
+      &_img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: none;
+        width: initial;
+        height: initial;
+        left: initial;
+        transform: translateX(0);
+      }
+      &_count{
+        position: relative;
+        top: initial;
+        left: initial;
+        padding: 3px;
+        width: 18px;
+        height: 18px;
+        font-size: 14px;
+        transform: translateX(0);
+        margin: 0;
+      }
+      &_price{
+        display: block;
+        font-size: 13px;
+        color: #fff;
+        margin-left: 10px;
+      }
+    }
+    &_request{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
+      /*max-width: 720px;*/
+      padding: 0;
+      order: 2;
+      &_text{
+        display: none;
+      }
+    }
+    &_social{
+      width: 180px;
+      &_text{
+        font-size: 12px;
+      }
+      &_list{
+        margin-top: 25px;
+      }
+      &_item{
+        &.vk{
+          background: url("./../img/vk-white.svg") no-repeat;
+        }
+        &.facebook{
+          background: url("./../img/facebook-white.svg") no-repeat;
+        }
+        &.instagram{
+          background: url("./../img/instagram-white.svg") no-repeat;
+        }
+        &.youtube{
+          background: url("./../img/youtube-white.svg") no-repeat;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /*Header (max-width: 480px)*/
+
+  .header{
+    & .container{
+      grid-template-columns: 56% 1fr 50px;
+    }
+    &_logo{
+      &_text{
+        font-size: 14px;
+      }
+    }
+    &_basket{
+      margin-right: 10px;
+    }
+  }
+
+  /*Боковое меню (max-width: 480px)*/
+
+  .sidebar{
+    & .container{
+      grid-template-columns: 56% 1fr;
+    }
+    &_nav{
+      &_link{
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  /*Header (max-width: 380px)*/
+
+  .header{
+    & .container{
+      grid-template-columns: 56% 1fr 50px;
+    }
+    &_logo{
+      &_text{
+        font-size: 13px;
+      }
+    }
+  }
+
+  /*Боковое меню (max-width: 380px)*/
+
+  .sidebar{
+    & .container{
+      grid-template-columns: 56% 1fr;
+    }
+    &_nav{
+      &_link{
+        font-size: 18px;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+<section class="article-page_blog">
+  <div class="container">
+    <div class="workout_row">
+      <h2 class="title-block">Блог</h2>
+      <div class="title-bg">Blog</div>
+    </div>
+  </div>
+  <div class="article_wrapper">
+    @@for (var i = 0; i < context.arr.length; i++) {
+    <div class="article_item">
+      <div class="article_marker `+context.arr[i].class+`"></div>
+      <div class="article_img_wrapper">
+        <img class="article_img" src="`+context.arr[i].img+`">
+      </div>
+      <div class="article_info">
+        <div class="article_row">
+          <div class="article_date">`+context.arr[i].date+`</div>
+          <div class="article_type `+context.arr[i].typeClass+`">`+context.arr[i].type+`</div>
+        </div>
+        <a class="article_caption" href="`+context.arr[i].link+`">`+context.arr[i].caption+`</a>
+        <div class="article_description">`+context.arr[i].description+`</div>
+      </div>
+      <a class="article_link" href="`+context.arr[i].link+`"></a>
+    </div>
+    }
+  </div>
+</section>

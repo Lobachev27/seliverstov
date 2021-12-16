@@ -1,0 +1,767 @@
+@import "partials/params";
+@import "partials/mixins";
+
+/*Блок о сайте*/
+
+.about{
+  position: relative;
+  margin: 120px 0 110px;
+  & .container{
+    display: grid;
+    grid-template-columns: 520fr 735fr;
+    grid-column-gap: 95px;
+  }
+  &_left{
+    padding-top: 65px;
+  }
+  &_right{
+    position: relative;
+    border: 1px solid #E2E2E2;
+  }
+  &_circle{
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    top: 0;
+    border: 1px solid #E2E2E2;
+    border-radius: 50%;
+    &.one{
+      left: 0
+    }
+    &.two{
+      left: 40px;
+    }
+    &.three{
+      left: 80px;
+    }
+  }
+  &_caption{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  &_description{
+    font-size: 15px;
+    color: #707070;
+    line-height: 1.5em;
+  }
+  &_img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    &_wrapper{
+      position: relative;
+      height: 225px;
+      &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, transparent 80%);
+      }
+    }
+    &_info{
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      top: 25px;
+      left: 30px;
+      z-index: 5;
+    }
+    &_text{
+      font-size: 15px;
+      font-weight: 300;
+      color: $text-color-white;
+      &:first-child{
+        margin-right: 60px;
+      }
+    }
+    &_amount{
+      font-family: 'Disolve-light';
+      font-size: 32px;
+      margin-right: 5px;
+    }
+  }
+  &_info{
+    background-color: #fff;
+    padding: 20px 30px 40px;
+    &_caption{
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    &_description{
+      font-size: 13px;
+      color: #646464;
+      line-height: 1.5em;
+      margin-bottom: 25px;
+      overflow: hidden;
+      height: 58px;
+      max-width: 410px;
+    }
+  }
+  &_coach{
+    position: absolute;
+    border: 12px solid #fff;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    width: 210px;
+    height: 370px;
+    top: 50%;
+    right: 45px;
+    transform: translateY(-50%);
+    &_img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+
+    }
+  }
+}
+
+/*Биография*/
+
+.about-intro{
+  position: relative;
+  width: 100%;
+  height: 450px;
+  background: url("../img/about-intro.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+    width: 100%;
+    height: 100%;
+  }
+  & .container{
+    height: 100%;
+  }
+  & .page{
+    &_way{
+      padding: 30px 0 15px;
+      &_link{
+        color: #fff;
+        &:last-child{
+          color: #fff;
+        }
+      }
+      & a:hover{
+        color: $color-orange-two;
+        transition: all 0.3s;
+      }
+      span {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.about-content{
+  position: relative;
+  width: 730px;
+  margin: 50px auto 80px;
+  &_caption{
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+  }
+  &_video{
+    position: relative;
+    height: max-content;
+    overflow: hidden;
+    margin: 40px 0 60px;
+    &_box{
+      width: 100%;
+      height: 410px;
+      outline: none;
+    }
+    &_btn{
+      position: absolute;
+      width: 110px;
+      height: 110px;
+      background: url("../img/video-btn.svg") no-repeat;
+      background-position: center;
+      background-size: cover;
+      border: none;
+      outline: none;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: 0.3s;
+      &:hover{
+        background: url("../img/video-btn-hover.svg") no-repeat;
+        background-position: center;
+        background-size: cover;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+    }
+  }
+  &_description{
+    position: relative;
+    font-size: 15px;
+    color: #707070;
+    line-height: 1.5em;
+    margin: 60px 95px 100px;
+    & p{
+      font-size: 15px;
+      color: #707070;
+      line-height: 1.5em;
+    }
+    & ul{
+      font-size: 15px;
+      color: #707070;
+      line-height: 1.5em;
+      list-style: none;
+    }
+    & li{
+      font-size: 15px;
+      color: #707070;
+      line-height: 1.5em;
+      &:before{
+        content: '—';
+        font-weight: 500;
+        color: $color-orange;
+        margin-right: 7px;
+      }
+    }
+  }
+  &_slider{
+    position: relative;
+    &_caption{
+      font-size: 20px;
+      font-weight: 700;
+      margin: 0 95px;
+    }
+    & .swiper-container{
+      position: relative;
+      margin-top: 40px;
+    }
+    & .swiper-slide{}
+    & .swiper-button-next,
+    & .swiper-button-prev{
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      outline: none;
+      background: none;
+      background-color: #fff;
+      border: 1px solid #E2E2E2;
+      color: #E2E2E2;
+      top: 40%;
+      transition: all 0.3s;
+      &:hover{
+        color: #000;
+        transition: all 0.3s;
+      }
+      &:before{
+        content: '';
+        font-family: 'FontAwesome';
+        font-size: 22px;
+        font-weight: 900;
+        position: absolute;
+        top: 50%;
+      }
+    }
+    & .swiper-button-next{
+      right: -3px;
+      &:before{
+        content: '\f105';
+        right: 46%;
+        transform: translate(50%, -50%);
+      }
+    }
+    & .swiper-button-prev{
+      left: -3px;
+      &:before{
+        content: '\f104';
+        left: 46%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+.brands{
+  &_link{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    &:hover{
+      & + .brands_description{
+        opacity: 1;
+        transition: opacity 0.5s;
+      }
+    }
+  }
+  &_img{
+    object-fit: contain;
+    object-position: center;
+    width: 152px;
+    height: 76px;
+  }
+  &_description{
+    position: relative;
+    background-color: #1E1E1E;
+    font-size: 12px;
+    line-height: 1.5em;
+    color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px 15px;
+    margin-top: 30px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: -1;
+    &:before{
+      content: '';
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      border: 20px solid transparent;
+      border-bottom: 20px solid #1e1e1e;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  /*Блок о сайте (max-width: 1919px)*/
+
+  .about{
+    margin: 80px 0;
+    & .container{
+      grid-column-gap: 60px;
+    }
+    &_left{
+      padding-top: 60px;
+    }
+    &_caption{
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    &_description{
+      font-size: 14px;
+    }
+    &_img{
+      &_wrapper{
+        height: 225px;
+      }
+      &_info{
+        top: 25px;
+        left: 30px;
+        z-index: 5;
+      }
+      &_text{
+        font-size: 14px;
+        &:first-child{
+          margin-right: 40px;
+        }
+      }
+      &_amount{
+        font-size: 30px;
+      }
+    }
+    &_info{
+      padding: 20px 30px 30px;
+      &_caption{
+        font-size: 22px;
+      }
+      &_description{
+        margin-bottom: 20px;
+        max-width: 350px;
+      }
+    }
+    &_coach{
+      right: 30px;
+    }
+  }
+
+  /*Биография (max-width: 1919px)*/
+
+  .about-intro{
+    height: 400px;
+    & .page{
+      &_way{
+        padding: 20px 0 20px;
+      }
+    }
+  }
+
+  .about-content{
+    margin: 40px auto 60px;
+    &_caption{
+      font-size: 26px;
+    }
+    &_video{
+      position: relative;
+      height: max-content;
+      overflow: hidden;
+      margin: 40px 0;
+      &_btn{
+        width: 100px;
+        height: 100px;
+      }
+    }
+    &_description{
+      font-size: 14px;
+      margin: 40px 95px 80px;
+      & p,
+      & ul,
+      & li{
+        font-size: 14px;
+      }
+    }
+    &_slider{
+      &_caption{
+        font-size: 20px;
+        margin: 0 95px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1499px) {
+  /*Блок о сайте (max-width: 1499px)*/
+
+  .about{
+    margin: 60px 0;
+    & .container{
+      grid-template-columns: 1fr 2fr;
+      grid-column-gap: 40px;
+    }
+    &_circle{
+      width: 22px;
+      height: 22px;
+      &.one{
+        left: 0
+      }
+      &.two{
+        left: 35px;
+      }
+      &.three{
+        left: 70px;
+      }
+    }
+    &_left{
+      padding-top: 40px;
+    }
+    &_caption{
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+    &_description{
+      font-size: 13px;
+      text-align: justify;
+    }
+    &_img{
+      &_wrapper{
+        height: 220px;
+      }
+      &_info{
+        top: 20px;
+        left: 25px;
+        z-index: 5;
+      }
+      &_text{
+        font-size: 14px;
+        &:first-child{
+          margin-right: 60px;
+        }
+      }
+      &_amount{
+        font-size: 28px;
+      }
+    }
+    &_info{
+      padding: 15px 25px 25px;
+      &_caption{
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      &_description{
+        margin-bottom: 15px;
+        max-width: 340px;
+      }
+    }
+    &_coach{
+      right: 25px;
+      width: 200px;
+      height: 350px;
+    }
+  }
+
+  /*Биография (max-width: 1499px)*/
+
+  .about-intro{
+    height: 350px;
+  }
+
+  .about-content{
+    margin: 40px auto;
+    &_caption{
+      font-size: 24px;
+    }
+    &_video{
+      position: relative;
+      height: max-content;
+      overflow: hidden;
+      margin: 30px 0;
+      &_btn{
+        width: 90px;
+        height: 90px;
+      }
+    }
+    &_description{
+      margin: 40px 80px 60px;
+    }
+    &_slider{
+      &_caption{
+        font-size: 20px;
+        margin: 0 80px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1249px) {
+  /*Блок о сайте (max-width: 1249px)*/
+
+  .about{
+    & .container{
+      display: block;
+    }
+    &_circle{
+      width: 22px;
+      height: 22px;
+      &.one{
+        left: initial;
+        right: 70px;
+      }
+      &.two{
+        left: initial;
+        right: 35px;
+      }
+      &.three{
+        left: initial;
+        right: 0;
+      }
+    }
+    &_left{
+      padding-top: 2px;
+      margin-bottom: 30px;
+    }
+    &_img{
+      &_wrapper{
+        height: 200px;
+      }
+      &_info{
+        top: 20px;
+        left: 25px;
+        z-index: 5;
+      }
+      &_text{
+        font-size: 14px;
+        &:first-child{
+          margin-right: 60px;
+        }
+      }
+      &_amount{
+        font-size: 28px;
+      }
+    }
+    &_info{
+      padding: 15px 25px 25px;
+      &_caption{
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      &_description{
+        margin-bottom: 15px;
+        max-width: 400px;
+      }
+    }
+    &_coach{
+      right: 25px;
+      width: 200px;
+      height: 330px;
+    }
+  }
+
+  /*Биография (max-width: 1249px)*/
+
+  .about-intro{
+    height: 350px;
+  }
+
+  .about-content{
+    margin: 40px auto;
+    &_caption{
+      font-size: 22px;
+    }
+    &_video{
+      margin: 20px 0;
+    }
+    &_description{
+      margin: 40px 80px 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /*Блок о сайте (max-width: 767px)*/
+
+  .about{
+    &_circle{
+      &.one{
+        right: 78px;
+      }
+      &.two{
+        right: 43px;
+      }
+      &.three{
+        right: 8px;
+      }
+    }
+    &_img{
+      &_wrapper{
+        height: 200px;
+      }
+      &_info{
+        top: 20px;
+        left: 20px;
+      }
+      &_text{
+        font-size: 14px;
+        &:first-child{
+          margin-right: 50px;
+        }
+      }
+      &_amount{
+        font-size: 28px;
+      }
+    }
+    &_info{
+      padding: 15px 20px 20px;
+      &_caption{
+        font-size: 18px;
+      }
+      &_description{
+        max-width: calc(100% - 200px);
+      }
+    }
+    &_coach{
+      right: 20px;
+      width: 180px;
+      height: 330px;
+    }
+  }
+
+  /*Биография (max-width: 767px)*/
+
+  .about-intro{
+    height: 320px;
+  }
+
+  .about-content{
+    width: 100%;
+    max-width: 720px;
+    padding: 0 8px;
+    margin: 30px auto 60px;
+    &_caption{
+      font-size: 20px;
+    }
+    &_video{
+      margin: 20px 0;
+      &_box{
+        width: 100%;
+        height: initial;
+      }
+      &_btn{
+        width: 70px;
+        height: 70px;
+      }
+    }
+    &_description{
+      margin: 30px 20px;
+    }
+    &_slider{
+      &_caption{
+        font-size: 18px;
+        margin: 0 20px;
+      }
+      & .swiper-container{
+        position: relative;
+        margin: 20px 0;
+      }
+      & .swiper-button-next,
+      & .swiper-button-prev{
+        top: 60%;
+      }
+    }
+  }
+
+  .brands{
+    &_link{
+      &:hover{
+        & + .brands_description{
+          display: none;
+        }
+      }
+    }
+    &_description{
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  /*Блок о сайте (max-width: 575px)*/
+
+  .about{
+    &_caption{
+      width: calc(100% - 100px);
+    }
+    &_left{
+      margin-bottom: 20px;
+    }
+    &_img{
+      &_info{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding: 20px;
+      }
+      &_text{
+        &:first-child{
+          margin-right: 0;
+        }
+      }
+    }
+    &_info{
+      height: max-content;
+      &_description{
+        height: max-content;
+        max-width: initial;
+        text-align: justify;
+      }
+    }
+    &_coach{
+      display: none;
+    }
+  }
+}

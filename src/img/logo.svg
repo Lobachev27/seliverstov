@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="135.5" viewBox="0 0 100 135.5">
+  <g id="Group_5" data-name="Group 5" transform="translate(-86 -23.5)">
+    <g id="Group_1" data-name="Group 1" transform="translate(435.056 -474.944)">
+      <ellipse id="Ellipse_1" data-name="Ellipse 1" cx="40" cy="40" rx="40" ry="40" transform="translate(-339.056 499.944)" fill="none" stroke="#1e1d1d" stroke-miterlimit="10" stroke-width="3"/>
+      <path id="Path_1" data-name="Path 1" d="M-315.037,510.926V527h31.074V510.926l-7.556,8.593-7.981-8.593-7.019,8.593Z" transform="translate(0.444)" fill="#1e1d1d"/>
+      <path id="Path_2" data-name="Path 2" d="M-315.037,541.482v16.074L-299.5,572.5l15.537-14.944V541.482l-7.556,8.593-7.981-8.593-7.019,8.593Z" transform="translate(0.444 0.889)" fill="#1e1d1d"/>
+    </g>
+    <text id="Дмитрий_Селиверстов" data-name="Дмитрий 
+Селиверстов" transform="translate(136 135)" fill="#1e1e1e" font-size="16" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="-36.242" y="0">Дмитрий </tspan><tspan x="-49.297" y="20">Селиверстов</tspan></text>
+  </g>
+</svg>

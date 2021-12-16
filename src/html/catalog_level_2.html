@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Мужская одежда"
+})
+
+<body>
+<main class="main">
+
+  @@include("./components/sidebar.html")
+
+  @@include("./components/registration.html")
+
+  @@include("./components/header.html", {
+    context: {
+      "class": "",
+    }
+  })
+
+  <div class="content">
+    <section class="page_leader">
+      <div class="container">
+        <div class="page_way">
+          <a class="page_way_link" href="/">Главная</a>
+          <span>/</span>
+          <a class="page_way_link" href="catalog_level_1.html">Продукция</a>
+          <span>/</span>
+          <p class="page_way_link">Мужская одежда</p>
+        </div>
+        <h1 class="title-article">Мужская одежда <span class="catalog_search">39</span></h1>
+      </div>
+    </section>
+    <section class="catalog">
+      <div class="container">
+        <div class="catalog_row">
+          <div class="catalog_nav">
+            <a class="catalog_nav_link active" href="javascript:void(0);">Все</a>
+            <a class="catalog_nav_link" href="javascript:void(0);">Толстовки</a>
+            <a class="catalog_nav_link" href="javascript:void(0);">Футболки</a>
+            <a class="catalog_nav_link" href="javascript:void(0);">Безрукавки</a>
+            <a class="catalog_nav_link" href="javascript:void(0);">Кепки</a>
+          </div>
+          <div class="catalog_sorting">
+            <div class="catalog_sorting_main">Популярные</div>
+            <div class="catalog_sorting_list">
+              <div class="catalog_sorting_item">Популярные</div>
+              <div class="catalog_sorting_item">Новинки</div>
+              <div class="catalog_sorting_item">Дорогие</div>
+              <div class="catalog_sorting_item">Дешевые</div>
+            </div>
+          </div>
+          <div class="catalog_view">
+            <a class="catalog_view_item block active" href="catalog_level_2.html"></a>
+            <a class="catalog_view_item row" href="javascript:void(0);"></a>
+          </div>
+        </div>
+        <div class="catalog_wrapper">
+          <div class="catalog_box">
+            <div class="catalog_box_wrapper">
+              <div class="catalog_box_sale">-21%</div>
+              <div class="catalog_box_img_wrapper">
+                <a class="catalog_box_img_link" href="card-product.html">
+                  <ul class="catalog_box_img_list">
+                    <li class="catalog_box_img_item">
+                      <img class="catalog_box_img" src="./img/catalog-1.jpg">
+                    </li>
+                    <li class="catalog_box_img_item">
+                      <img class="catalog_box_img" src="./img/catalog-2.jpg">
+                    </li>
+                    <li class="catalog_box_img_item">
+                      <img class="catalog_box_img" src="./img/catalog-3.jpg">
+                    </li>
+                  </ul>
+                  <div class="catalog_box_img_tiles">
+                    <div class="catalog_box_img_tile"></div>
+                    <div class="catalog_box_img_tile"></div>
+                    <div class="catalog_box_img_tile"></div>
+                  </div>
+                </a>
+              </div>
+              <div class="catalog_box_info">
+                <div class="catalog_box_type">Толстовка мужская</div>
+                <a class="catalog_box_name" href="card-product.html">Толстовка NeverGiveUp</a>
+                <div class="catalog_box_price">
+                  <div class="catalog_box_price_old">6 200 ₽</div>
+                  <div class="catalog_box_price_new">5 450 ₽</div>
+                </div>
+                <div class="catalog_box_size">
+                  <label class="radio_size">
+                    <input type="radio" name="size_1" value="S">
+                    <div class="radio_size_text">S</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_1" value="M">
+                    <div class="radio_size_text">M</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_1" value="L">
+                    <div class="radio_size_text">L</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_1" value="XL">
+                    <div class="radio_size_text">XL</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_1" value="XXL">
+                    <div class="radio_size_text">XXL</div>
+                  </label>
+                </div>
+                <button class="catalog_box_btn"></button>
+              </div>
+            </div>
+          </div>
+          <div class="catalog_box">
+            <div class="catalog_box_wrapper">
+              <div class="catalog_box_sale none"></div>
+              <div class="catalog_box_img_wrapper">
+                <a class="catalog_box_img_link" href="card-product.html">
+                  <ul class="catalog_box_img_list">
+                    <li class="catalog_box_img_item">
+                      <img class="catalog_box_img" src="./img/catalog-2.jpg">
+                    </li>
+                    <li class="catalog_box_img_item">
+                      <img class="catalog_box_img" src="./img/catalog-3.jpg">
+                    </li>
+                    <li class="catalog_box_img_item">
+                      <img class="catalog_box_img" src="./img/catalog-4.jpg">
+                    </li>
+                    <li class="catalog_box_img_item">
+                      <img class="catalog_box_img" src="./img/catalog-5.jpg">
+                    </li>
+                  </ul>
+                  <div class="catalog_box_img_tiles">
+                    <div class="catalog_box_img_tile"></div>
+                    <div class="catalog_box_img_tile"></div>
+                    <div class="catalog_box_img_tile"></div>
+                    <div class="catalog_box_img_tile"></div>
+                  </div>
+                </a>
+              </div>
+              <div class="catalog_box_info">
+                <div class="catalog_box_type">Безрукавка мужская</div>
+                <a class="catalog_box_name" href="card-product.html">Безрукавка Imperior's Strike</a>
+                <div class="catalog_box_price">
+                  <div class="catalog_box_price_old none"></div>
+                  <div class="catalog_box_price_new normal">3 150 ₽</div>
+                </div>
+                <div class="catalog_box_size">
+                  <label class="radio_size">
+                    <input type="radio" name="size_2" value="S">
+                    <div class="radio_size_text">S</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_2" value="M">
+                    <div class="radio_size_text">M</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_2" value="L">
+                    <div class="radio_size_text">L</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_2" value="XL">
+                    <div class="radio_size_text">XL</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_2" value="XXL">
+                    <div class="radio_size_text">XXL</div>
+                  </label>
+                </div>
+                <button class="catalog_box_btn"></button>
+              </div>
+            </div>
+          </div>
+          <div class="catalog_box">
+            <div class="catalog_box_wrapper">
+              <div class="catalog_box_sale none"></div>
+              <div class="catalog_box_img_wrapper">
+                <a class="catalog_box_img_link" href="card-product.html">
+                  <ul class="catalog_box_img_list">
+                    <li class="catalog_box_img_item">
+                      <img class="catalog_box_img" src="./img/catalog-3.jpg">
+                    </li>
+                  </ul>
+                  <div class="catalog_box_img_tiles">
+                    <div class="catalog_box_img_tile"></div>
+                  </div>
+                </a>
+              </div>
+              <div class="catalog_box_info">
+                <div class="catalog_box_type">Безрукавка мужская</div>
+                <a class="catalog_box_name" href="card-product.html">Безрукавка ShapeU</a>
+                <div class="catalog_box_price">
+                  <div class="catalog_box_price_old none"></div>
+                  <div class="catalog_box_price_new normal">2 730 ₽</div>
+                </div>
+                <div class="catalog_box_size">
+                  <label class="radio_size">
+                    <input type="radio" name="size_3" value="S">
+                    <div class="radio_size_text">S</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_3" value="M">
+                    <div class="radio_size_text">M</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_3" value="L">
+                    <div class="radio_size_text">L</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_3" value="XL">
+                    <div class="radio_size_text">XL</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_3" value="XXL">
+                    <div class="radio_size_text">XXL</div>
+                  </label>
+                </div>
+                <button class="catalog_box_btn"></button>
+              </div>
+            </div>
+          </div>
+          <div class="catalog_box">
+            <div class="catalog_box_wrapper">
+              <div class="catalog_box_sale none"></div>
+              <div class="catalog_box_img_wrapper">
+                <a class="catalog_box_img_link" href="card-product.html">
+                  <ul class="catalog_box_img_list">
+                    <li class="catalog_box_img_item">
+                      <img class="catalog_box_img" src="./img/catalog-4.jpg">
+                    </li>
+                    <li class="catalog_box_img_item">
+                      <img class="catalog_box_img" src="./img/catalog-1.jpg">
+                    </li>
+                  </ul>
+                  <div class="catalog_box_img_tiles">
+                    <div class="catalog_box_img_tile"></div>
+                    <div class="catalog_box_img_tile"></div>
+                  </div>
+                </a>
+              </div>
+              <div class="catalog_box_info">
+                <div class="catalog_box_type">Толстовка мужская</div>
+                <a class="catalog_box_name" href="card-product.html">Толстовка NeverGiveUp</a>
+                <div class="catalog_box_price">
+                  <div class="catalog_box_price_old none"></div>
+                  <div class="catalog_box_price_new normal">3 150 ₽</div>
+                </div>
+                <div class="catalog_box_size">
+                  <label class="radio_size">
+                    <input type="radio" name="size_4" value="S">
+                    <div class="radio_size_text">S</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_4" value="M">
+                    <div class="radio_size_text">M</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_4" value="L">
+                    <div class="radio_size_text">L</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_4" value="XL">
+                    <div class="radio_size_text">XL</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_4" value="XXL">
+                    <div class="radio_size_text">XXL</div>
+                  </label>
+                </div>
+                <button class="catalog_box_btn"></button>
+              </div>
+            </div>
+          </div>
+          <div class="catalog_box">
+            <div class="catalog_box_wrapper">
+              <div class="catalog_box_sale">32%</div>
+              <div class="catalog_box_img_wrapper">
+                <a class="catalog_box_img_link" href="card-product.html">
+                  <ul class="catalog_box_img_list">
+                    <li class="catalog_box_img_item">
+                      <img class="catalog_box_img" src="./img/catalog-5.jpg">
+                    </li>
+                    <li class="catalog_box_img_item">
+                      <img class="catalog_box_img" src="./img/catalog-2.jpg">
+                    </li>
+                    <li class="catalog_box_img_item">
+                      <img class="catalog_box_img" src="./img/catalog-3.jpg">
+                    </li>
+                    <li class="catalog_box_img_item">
+                      <img class="catalog_box_img" src="./img/catalog-4.jpg">
+                    </li>
+                    <li class="catalog_box_img_item">
+                      <img class="catalog_box_img" src="./img/catalog-1.jpg">
+                    </li>
+                  </ul>
+                  <div class="catalog_box_img_tiles">
+                    <div class="catalog_box_img_tile"></div>
+                    <div class="catalog_box_img_tile"></div>
+                    <div class="catalog_box_img_tile"></div>
+                    <div class="catalog_box_img_tile"></div>
+                    <div class="catalog_box_img_tile"></div>
+                  </div>
+                </a>
+              </div>
+              <div class="catalog_box_info">
+                <div class="catalog_box_type">Безрукавка мужская</div>
+                <a class="catalog_box_name" href="card-product.html">Безрукавка Imperior's Strike</a>
+                <div class="catalog_box_price">
+                  <div class="catalog_box_price_old">6 200 ₽</div>
+                  <div class="catalog_box_price_new">3 750 ₽</div>
+                </div>
+                <div class="catalog_box_size">
+                  <label class="radio_size">
+                    <input type="radio" name="size_5" value="S">
+                    <div class="radio_size_text">S</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_5" value="M">
+                    <div class="radio_size_text">M</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_5" value="L">
+                    <div class="radio_size_text">L</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_5" value="XL">
+                    <div class="radio_size_text">XL</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_5" value="XXL">
+                    <div class="radio_size_text">XXL</div>
+                  </label>
+                </div>
+                <button class="catalog_box_btn"></button>
+              </div>
+            </div>
+          </div>
+          <div class="catalog_box">
+            <div class="catalog_box_wrapper">
+              <div class="catalog_box_sale none"></div>
+              <div class="catalog_box_img_wrapper">
+                <a class="catalog_box_img_link" href="card-product.html">
+                  <ul class="catalog_box_img_list">
+                    <li class="catalog_box_img_item">
+                      <img class="catalog_box_img" src="./img/catalog-3.jpg">
+                    </li>
+                    <li class="catalog_box_img_item">
+                      <img class="catalog_box_img" src="./img/catalog-2.jpg">
+                    </li>
+                    <li class="catalog_box_img_item">
+                      <img class="catalog_box_img" src="./img/catalog-4.jpg">
+                    </li>
+                  </ul>
+                  <div class="catalog_box_img_tiles">
+                    <div class="catalog_box_img_tile"></div>
+                    <div class="catalog_box_img_tile"></div>
+                    <div class="catalog_box_img_tile"></div>
+                  </div>
+                </a>
+              </div>
+              <div class="catalog_box_info">
+                <div class="catalog_box_type">Безрукавка мужская</div>
+                <a class="catalog_box_name" href="card-product.html">Безрукавка ShapeU</a>
+                <div class="catalog_box_price">
+                  <div class="catalog_box_price_old none"></div>
+                  <div class="catalog_box_price_new normal">2 730 ₽</div>
+                </div>
+                <div class="catalog_box_size">
+                  <label class="radio_size">
+                    <input type="radio" name="size_6" value="S">
+                    <div class="radio_size_text">S</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_6" value="M">
+                    <div class="radio_size_text">M</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_6" value="L">
+                    <div class="radio_size_text">L</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_6" value="XL">
+                    <div class="radio_size_text">XL</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_6" value="XXL">
+                    <div class="radio_size_text">XXL</div>
+                  </label>
+                </div>
+                <button class="catalog_box_btn"></button>
+              </div>
+            </div>
+          </div>
+          <div class="catalog_box">
+            <div class="catalog_box_wrapper">
+              <div class="catalog_box_sale none"></div>
+              <div class="catalog_box_img_wrapper">
+                <a class="catalog_box_img_link" href="card-product.html">
+                  <ul class="catalog_box_img_list">
+                    <li class="catalog_box_img_item">
+                      <img class="catalog_box_img" src="./img/catalog-6.jpg">
+                    </li>
+                    <li class="catalog_box_img_item">
+                      <img class="catalog_box_img" src="./img/catalog-5.jpg">
+                    </li>
+                    <li class="catalog_box_img_item">
+                      <img class="catalog_box_img" src="./img/catalog-2.jpg">
+                    </li>
+                  </ul>
+                  <div class="catalog_box_img_tiles">
+                    <div class="catalog_box_img_tile"></div>
+                    <div class="catalog_box_img_tile"></div>
+                    <div class="catalog_box_img_tile"></div>
+                  </div>
+                </a>
+              </div>
+              <div class="catalog_box_info">
+                <div class="catalog_box_type">Толстовка мужская</div>
+                <a class="catalog_box_name" href="card-product.html">Толстовка NeverGiveUp</a>
+                <div class="catalog_box_price">
+                  <div class="catalog_box_price_old none"></div>
+                  <div class="catalog_box_price_new normal">5 450 ₽</div>
+                </div>
+                <div class="catalog_box_size">
+                  <label class="radio_size">
+                    <input type="radio" name="size_7" value="S">
+                    <div class="radio_size_text">S</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_7" value="M">
+                    <div class="radio_size_text">M</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_7" value="L">
+                    <div class="radio_size_text">L</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_7" value="XL">
+                    <div class="radio_size_text">XL</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_7" value="XXL">
+                    <div class="radio_size_text">XXL</div>
+                  </label>
+                </div>
+                <button class="catalog_box_btn"></button>
+              </div>
+            </div>
+          </div>
+          <div class="catalog_box">
+            <div class="catalog_box_wrapper">
+              <div class="catalog_box_sale none"></div>
+              <div class="catalog_box_img_wrapper">
+                <a class="catalog_box_img_link" href="card-product.html">
+                  <ul class="catalog_box_img_list">
+                    <li class="catalog_box_img_item">
+                      <img class="catalog_box_img" src="./img/catalog-7.jpg">
+                    </li>
+                    <li class="catalog_box_img_item">
+                      <img class="catalog_box_img" src="./img/catalog-6.jpg">
+                    </li>
+                    <li class="catalog_box_img_item">
+                      <img class="catalog_box_img" src="./img/catalog-2.jpg">
+                    </li>
+                  </ul>
+                  <div class="catalog_box_img_tiles">
+                    <div class="catalog_box_img_tile"></div>
+                    <div class="catalog_box_img_tile"></div>
+                    <div class="catalog_box_img_tile"></div>
+                  </div>
+                </a>
+              </div>
+              <div class="catalog_box_info">
+                <div class="catalog_box_type">Безрукавка мужская</div>
+                <a class="catalog_box_name" href="card-product.html">Безрукавка Imperior's Strike</a>
+                <div class="catalog_box_price">
+                  <div class="catalog_box_price_old none"></div>
+                  <div class="catalog_box_price_new normal">3 150 ₽</div>
+                </div>
+                <div class="catalog_box_size">
+                  <label class="radio_size">
+                    <input type="radio" name="size_8" value="S">
+                    <div class="radio_size_text">S</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_8" value="M">
+                    <div class="radio_size_text">M</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_8" value="L">
+                    <div class="radio_size_text">L</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_8" value="XL">
+                    <div class="radio_size_text">XL</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_8" value="XXL">
+                    <div class="radio_size_text">XXL</div>
+                  </label>
+                </div>
+                <button class="catalog_box_btn"></button>
+              </div>
+            </div>
+          </div>
+          <div class="catalog_box">
+            <div class="catalog_box_wrapper">
+              <div class="catalog_box_sale none"></div>
+              <div class="catalog_box_img_wrapper">
+                <a class="catalog_box_img_link" href="card-product.html">
+                  <ul class="catalog_box_img_list">
+                    <li class="catalog_box_img_item">
+                      <img class="catalog_box_img" src="./img/catalog-8.jpg">
+                    </li>
+                    <li class="catalog_box_img_item">
+                      <img class="catalog_box_img" src="./img/catalog-7.jpg">
+                    </li>
+                    <li class="catalog_box_img_item">
+                      <img class="catalog_box_img" src="./img/catalog-4.jpg">
+                    </li>
+                  </ul>
+                  <div class="catalog_box_img_tiles">
+                    <div class="catalog_box_img_tile"></div>
+                    <div class="catalog_box_img_tile"></div>
+                    <div class="catalog_box_img_tile"></div>
+                  </div>
+                </a>
+              </div>
+              <div class="catalog_box_info">
+                <div class="catalog_box_type">Безрукавка мужская</div>
+                <a class="catalog_box_name" href="card-product.html">Безрукавка ShapeU</a>
+                <div class="catalog_box_price">
+                  <div class="catalog_box_price_old none"></div>
+                  <div class="catalog_box_price_new normal">2 730 ₽</div>
+                </div>
+                <div class="catalog_box_size">
+                  <label class="radio_size">
+                    <input type="radio" name="size_9" value="S">
+                    <div class="radio_size_text">S</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_9" value="M">
+                    <div class="radio_size_text">M</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_9" value="L">
+                    <div class="radio_size_text">L</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_9" value="XL">
+                    <div class="radio_size_text">XL</div>
+                  </label>
+                  <label class="radio_size">
+                    <input type="radio" name="size_9" value="XXL">
+                    <div class="radio_size_text">XXL</div>
+                  </label>
+                </div>
+                <button class="catalog_box_btn"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="page_nav">
+          <a class="page_nav_prev" href="javascript:void(0);"><</a>
+          <a class="page_nav_number active" href="javascript:void(0);">1</a>
+          <a class="page_nav_number" href="javascript:void(0);">2</a>
+          <a class="page_nav_number" href="javascript:void(0);">3</a>
+          <a class="page_nav_number" href="javascript:void(0);">...</a>
+          <a class="page_nav_number" href="javascript:void(0);">16</a>
+          <a class="page_nav_next" href="javascript:void(0);">></a>
+        </nav>
+      </div>
+    </section>
+
+    @@include("./components/article-page-blog.html", {
+      context: {
+        arr: [
+          {"class": "fire", "img": "./img/article-1.jpg", "date": "08/04/2019", "typeClass": "news", "type": "новость", "caption": "Заголовок новости", "description": "Для тех, кто хочет двигаться вперед и изменить себя, подойдут индивидуально разработанные тренировочные программы и рационы питания, персональные тренировки и онлайн консультации.", "link": "javascript:void(0);",},
+          {"class": "", "img": "./img/article-2.jpg", "date": "08/04/2019", "typeClass": "advice", "type": "статья", "caption": "Заголовок новости", "description": "Для тех, кто хочет двигаться вперед и изменить себя, подойдут индивидуально разработанные тренировочные программы и рационы питания, персональные тренировки и онлайн консультации.", "link": "javascript:void(0);",},
+          {"class": "", "img": "./img/article-3.jpg", "date": "08/04/2019", "typeClass": "advice", "type": "статья", "caption": "Заголовок новости", "description": "Для тех, кто хочет двигаться вперед и изменить себя, подойдут индивидуально разработанные тренировочные программы и рационы питания, персональные тренировки и онлайн консультации.", "link": "javascript:void(0);",},
+        ]
+      }
+    })
+
+  </div>
+
+  @@include("./components/footer.html")
+
+</main>
+
+@@include("./components/popup-instagram.html")
+
+@@include("./shared/script.html")
+</body>
+</html>

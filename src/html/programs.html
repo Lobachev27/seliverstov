@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Программы тренировок"
+})
+
+<body>
+<main class="main">
+
+  @@include("./components/sidebar.html")
+
+  @@include("./components/registration.html")
+
+  @@include("./components/header.html", {
+    context: {
+      "class": "",
+    }
+  })
+
+  <div class="content">
+    <section class="page_leader">
+      <div class="container">
+        <div class="page_way">
+          <a class="page_way_link" href="/">Главная</a>
+          <span>/</span>
+          <p class="page_way_link">Программы</p>
+        </div>
+        <h1 class="title-article-page">Программы тренировок</h1>
+        <div class="programs-list_description">Выберите себе онлайн-программу тренировок, которая подойдет именно Вам. </div>
+        <div class="consultation">
+          <div class="consultation_text">Требуется консультация? Оставьте заявку.</div>
+          <a class="btn btn-consultation" href="javascript:void(0);">Оставить заявку</a>
+        </div>
+      </div>
+    </section>
+    <section class="programs-list_about">
+      <div class="container">
+        <div class="programs-list_about_left">
+          <img class="programs-list_about_img" src="./img/programs-about-image.png">
+          <div class="programs-list_about_position">Фитнес-тренер</div>
+          <div class="programs-list_about_name">Дмитрий Селиверстов</div>
+          <div class="programs-list_social_list">
+            <a class="programs-list_social_item vk" href="javascript:void(0);"></a>
+            <a class="programs-list_social_item facebook" href="javascript:void(0);"></a>
+            <a class="programs-list_social_item instagram" href="javascript:void(0);"></a>
+          </div>
+        </div>
+        <div class="programs-list_award_list">
+          <div class="programs-list_award_item">
+            <div class="programs-list_award_caption">1-е место</div>
+            <div class="programs-list_award_description">в ростовой категории 178+</div>
+            <div class="programs-list_award_name">Алекс-фитнес 2015</div>
+          </div>
+          <div class="programs-list_award_item">
+            <div class="programs-list_award_caption">1-е место</div>
+            <div class="programs-list_award_description">в ростовой категории 178+</div>
+            <div class="programs-list_award_name">Открытый кубок СЗФО</div>
+          </div>
+          <div class="programs-list_award_item">
+            <div class="programs-list_award_caption">1-е место</div>
+            <div class="programs-list_award_description">в ростовой категории 178+</div>
+            <div class="programs-list_award_name">Кубок России / Восточной Европы “Самсон-38″</div>
+          </div>
+          <div class="programs-list_award_item">
+            <div class="programs-list_award_caption">1-е место</div>
+            <div class="programs-list_award_description">в ростовой категории 178+</div>
+            <div class="programs-list_award_name">Кубок Яшанькина 2015</div>
+          </div>
+          <div class="programs-list_award_item">
+            <div class="programs-list_award_caption">1-е место</div>
+            <div class="programs-list_award_description">в номинации Men’s Physique</div>
+            <div class="programs-list_award_name">Arnold Classic 2016</div>
+          </div>
+          <a class="programs-list_award_link" href="about.html">Перейти к биографии</a>
+        </div>
+      </div>
+    </section>
+    <section class="programs-list">
+      <div class="container">
+        <div class="programs-list_row">
+          <div class="programs-list_text">Выберите Вашу цель:</div>
+          <nav class="programs-list_nav">
+            <a class="programs-list_item active" href="#all">Все</a>
+            <a class="programs-list_item" href="#performance">Подготовка к выступлениям</a>
+            <a class="programs-list_item" href="#life">Для повседневной жизни</a>
+            <a class="programs-list_item" href="#drying">Для сжигания жира</a>
+            <a class="programs-list_item" href="#weight">Для набора массы</a>
+          </nav>
+        </div>
+
+        @@include("./components/programs-list.html", {
+          context: {
+            "id": "all",
+            arr: [
+              {"img": "./img/programs-1.jpg", "caption": "CrossFit Programm", "time": "2-3 недели", "price": "7 850 ₽", "list": '<li class="programs_box_item">Detailed custom meal plan</li><li class="programs_box_item">Carb cycling program</li><ul class="programs_box_additionally"><li class="programs_box_item">Grocery & Food substitution list</li><li class="programs_box_item">10+ pages of nutritional tips and ways to stay lean</li><li class="programs_box_item">Daily Snack Ideas</li><li class="programs_box_item">Supplement recommendations for faster results</li><li class="programs_box_item">Detailed 12 phase workout program (new phase rotated every 2 weeks)</li></ul><a class="programs_box_more" href="javascript:void(0);">Что включено</a>', "link": "javascript:void(0);",},
+              {"img": "./img/programs-2.jpg", "caption": "Fitness Programm", "time": "3-4 неделии", "price": "9 850 ₽", "list": '<li class="programs_box_item">Detailed custom meal plan</li><li class="programs_box_item">Carb cycling program</li><ul class="programs_box_additionally"><li class="programs_box_item">Grocery & Food substitution list</li><li class="programs_box_item">10+ pages of nutritional tips and ways to stay lean</li><li class="programs_box_item">Daily Snack Ideas</li><li class="programs_box_item">Supplement recommendations for faster results</li><li class="programs_box_item">Detailed 12 phase workout program (new phase rotated every 2 weeks)</li></ul><a class="programs_box_more" href="javascript:void(0);">Что включено</a>', "link": "javascript:void(0);",},
+              {"img": "./img/programs-3.jpg", "caption": "WorkOut Programm", "time": "2-3 недели", "price": "11 250 ₽", "list": '<li class="programs_box_item">Detailed custom meal plan</li><li class="programs_box_item">Carb cycling program</li><ul class="programs_box_additionally"><li class="programs_box_item">Grocery & Food substitution list</li><li class="programs_box_item">10+ pages of nutritional tips and ways to stay lean</li><li class="programs_box_item">Daily Snack Ideas</li><li class="programs_box_item">Supplement recommendations for faster results</li><li class="programs_box_item">Detailed 12 phase workout program (new phase rotated every 2 weeks)</li></ul><a class="programs_box_more" href="javascript:void(0);">Что включено</a>', "link": "javascript:void(0);",},
+              {"img": "./img/programs-4.jpg", "caption": "CrossFit Programm", "time": "2-3 недели", "price": "5 650 ₽", "list": '<li class="programs_box_item">Detailed custom meal plan</li><li class="programs_box_item">Carb cycling program</li><ul class="programs_box_additionally"><li class="programs_box_item">Grocery & Food substitution list</li><li class="programs_box_item">10+ pages of nutritional tips and ways to stay lean</li><li class="programs_box_item">Daily Snack Ideas</li><li class="programs_box_item">Supplement recommendations for faster results</li><li class="programs_box_item">Detailed 12 phase workout program (new phase rotated every 2 weeks)</li></ul><a class="programs_box_more" href="javascript:void(0);">Что включено</a>', "link": "javascript:void(0);",},
+              {"img": "./img/programs-5.jpg", "caption": "Fitness Programm", "time": "3-4 неделии", "price": "6 950 ₽", "list": '<li class="programs_box_item">Detailed custom meal plan</li><li class="programs_box_item">Carb cycling program</li><ul class="programs_box_additionally"><li class="programs_box_item">Grocery & Food substitution list</li><li class="programs_box_item">10+ pages of nutritional tips and ways to stay lean</li><li class="programs_box_item">Daily Snack Ideas</li><li class="programs_box_item">Supplement recommendations for faster results</li><li class="programs_box_item">Detailed 12 phase workout program (new phase rotated every 2 weeks)</li></ul><a class="programs_box_more" href="javascript:void(0);">Что включено</a>', "link": "javascript:void(0);",},
+              {"img": "./img/programs-6.jpg", "caption": "WorkOut Programm", "time": "2-3 недели", "price": "7 050 ₽", "list": '<li class="programs_box_item">Detailed custom meal plan</li><li class="programs_box_item">Carb cycling program</li><ul class="programs_box_additionally"><li class="programs_box_item">Grocery & Food substitution list</li><li class="programs_box_item">10+ pages of nutritional tips and ways to stay lean</li><li class="programs_box_item">Daily Snack Ideas</li><li class="programs_box_item">Supplement recommendations for faster results</li><li class="programs_box_item">Detailed 12 phase workout program (new phase rotated every 2 weeks)</li></ul><a class="programs_box_more" href="javascript:void(0);">Что включено</a>', "link": "javascript:void(0);",},
+            ]
+          }
+        })
+
+        <div id="performance" class="programs-list_wrapper"></div>
+        <div id="life" class="programs-list_wrapper"></div>
+        <div id="drying" class="programs-list_wrapper"></div>
+        <div id="weight" class="programs-list_wrapper"></div>
+      </div>
+    </section>
+
+    @@include("./components/article-page-blog.html", {
+      context: {
+        arr: [
+          {"class": "fire", "img": "./img/article-1.jpg", "date": "08/04/2019", "typeClass": "news", "type": "новость", "caption": "Заголовок новости", "description": "Для тех, кто хочет двигаться вперед и изменить себя, подойдут индивидуально разработанные тренировочные программы и рационы питания, персональные тренировки и онлайн консультации.", "link": "javascript:void(0);",},
+          {"class": "", "img": "./img/article-2.jpg", "date": "08/04/2019", "typeClass": "advice", "type": "статья", "caption": "Заголовок новости", "description": "Для тех, кто хочет двигаться вперед и изменить себя, подойдут индивидуально разработанные тренировочные программы и рационы питания, персональные тренировки и онлайн консультации.", "link": "javascript:void(0);",},
+          {"class": "", "img": "./img/article-3.jpg", "date": "08/04/2019", "typeClass": "advice", "type": "статья", "caption": "Заголовок новости", "description": "Для тех, кто хочет двигаться вперед и изменить себя, подойдут индивидуально разработанные тренировочные программы и рационы питания, персональные тренировки и онлайн консультации.", "link": "javascript:void(0);",},
+        ]
+      }
+    })
+
+  </div>
+
+  @@include("./components/footer.html")
+
+</main>
+
+@@include("./components/popup-instagram.html")
+
+@@include("./shared/script.html")
+</body>
+</html>

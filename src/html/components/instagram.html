@@ -1,0 +1,20 @@
+<div class="instagram-block">
+  <div class="workout_row">
+    <h2 class="title-block">Подпишитесь на наш Instagram</h2>
+    <div class="title-bg">Instagram</div>
+  </div>
+  <div class="instagram-block_wrapper">
+    @@for (var i = 0; i < context.arr.length; i++) {
+    <div class="instagram-block_box">
+      <img class="instagram-block_box_img" src="`+context.arr[i].img+`">
+      <div class="instagram-block_box_info">
+        <div class="instagram-block_box_row">
+          <div class="instagram-block_box_like">`+context.arr[i].like+`</div>
+          <div class="instagram-block_box_comment">`+context.arr[i].comment+`</div>
+        </div>
+      </div>
+      <a class="instagram-block_box_link" href="javascript:void(0);" onclick="open_modal('instagramModal')"></a>
+    </div>
+    }
+  </div>
+</div>

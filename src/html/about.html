@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Биография"
+})
+
+<body>
+<main class="main">
+
+  @@include("./components/sidebar.html")
+
+  @@include("./components/registration.html")
+
+  @@include("./components/header.html", {
+    context: {
+      "class": "",
+    }
+  })
+
+  <div class="content">
+    <section class="about-intro">
+      <div class="container">
+        <div class="page_way">
+          <a class="page_way_link" href="/">Главная</a>
+          <span>/</span>
+          <p class="page_way_link">Биография</p>
+        </div>
+        <h1 class="title-about">Тренер чемпионов. Бодибилдер. Продюсер.</h1>
+      </div>
+    </section>
+    <section class="about-content">
+      <h2 class="about-content_caption">Кто такой Дмитрий Селиверстов?</h2>
+      <div class="about-content_video">
+        <video class="about-content_video_box" controls>
+          <source src="./img/video.mp4" type="video/mp4">
+        </video>
+        <button class="about-content_video_btn" type="button"></button>
+      </div>
+      <div class="about-content_description">
+        <p>Дмитрий Селивёрстов родом из Ульяновска. Он родился в 1982 году. Его биография лишний раз подтверждает, что семья – это начало всех начал. Будущее, которое начинается, когда шестилетний идешь с отцом на тренировку по дзюдо и самбо. А потом вместе с одноклассниками не пропускаешь тренировки в футбольной секции, потом в большом теннисе или по легкой атлетике. Определяться в жизни Дмитрию пришлось не раз. Например, в 16 лет Селивёрстов поступает в Академию ФСБ, через девять лет была Дипломатическая академия МИД РФ.</p><br>
+        <p>И вдруг в 2015 году в бодибилдинге появился неизвестно откуда никому не знакомый абсолютный чемпион России и Восточной Европы по бодибилдингу в номинации «Пляжный бодибилдинг» Дмитрий Селивёрстов:</p><br>
+        <ul>
+          <li>первое место на «Алекс-фитнес – 2015»;</li>
+          <li>первое место на Открытом кубке СЗФО, абсолютный победитель кубка;</li>
+          <li>первое место на Кубке России/Восточной Европы «Самсон-38»;</li>
+          <li>абсолютный победитель Кубка Яшанькина – 2015;</li>
+          <li>победитель «Арнольд классик – 2016» в номинации Men’s Physique.</li>
+        </ul><br>
+        <p>Организаторские способности и желание сделать мир вокруг лучше, а также медийная известность после столь впечатляющих побед способствовали Дмитрию в создании проекта, который объединил сотни людей пока в 20 городах страны на почве здоровья и спорта. Люди выходят на свежий воздух выполнить программу тренировок, которая доступна любому, – добровольно, безвозмездно, безгранично.</p><br>
+        <p>А Дмитрий ездит по стране и дает мастер-класс – на 21 день организует людей на ежедневные тренировки. По поводу названия проекта. Когда-то, когда Дмитрий отпустил бороду в русском стиле (и стал первым абсолютным чемпионом с бородой), ему дали прозвище Император за сходство с Николаем II.</p><br>
+        <p>А воля – ее каждый должен разбудить в себе, если она спит. Или проявить ее в этот 21 день тренировок, чтобы закончить цикл. Хотя тут нет обязаловки. Человек может в любое время отказаться от занятий. Императорский класс собирает от 100 до 150 человек. Людям нравится. И впереди еще много задумок по развитию проекта.</p>
+      </div>
+      <div class="about-content_slider">
+        <div class="about-content_slider_caption">СМИ и медиа</div>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a class="brands_link" href="javascript:void(0);">
+                <img class="brands_img" src="./img/brands-1.svg">
+              </a>
+              <div class="brands_description">Учатие в утренней программе «Название программы»</div>
+            </div>
+            <div class="swiper-slide">
+              <a class="brands_link" href="javascript:void(0);">
+                <img class="brands_img" src="./img/brands-2.svg">
+              </a>
+              <div class="brands_description">Учатие в утренней программе «Название программы»</div>
+            </div>
+            <div class="swiper-slide">
+              <a class="brands_link" href="javascript:void(0);">
+                <img class="brands_img" src="./img/brands-3.svg">
+              </a>
+              <div class="brands_description">Учатие в утренней программе «Название программы»</div>
+            </div>
+          </div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+  </div>
+
+  @@include("./components/footer.html")
+
+</main>
+
+@@include("./components/popup-instagram.html")
+
+@@include("./shared/script.html")
+</body>
+</html>

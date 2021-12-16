@@ -1,0 +1,32 @@
+<section class="advantages">
+  <div class="container">
+    <div class="advantages_caption">В чем уникальность онлайн-программ от тренера чемпионов?</div>
+    <a class="btn btn-advantages" href="#registration">Заполнить анкету</a>
+    <div class="advantages_list">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          @@for (var i = 0; i < context.arr.length; i++) {
+          <div class="swiper-slide">
+            <div class="advantages_box">
+              <div class="advantages_box_wrapper">
+                <div class="advantages_box_circle_wrapper">
+                  <div class="advantages_box_circle one"></div>
+                  <div class="advantages_box_circle two"></div>
+                  <div class="advantages_box_circle three"></div>
+                </div>
+                <img class="advantages_box_bg" src="./img/triangle.png">
+                <div class="advantages_box_number">`+context.arr[i].number+`</div>
+                <div class="advantages_box_caption">`+context.arr[i].caption+`</div>
+                <div class="advantages_box_description">`+context.arr[i].description+`</div>
+                <a class="btn btn-advantages-box" href="`+context.arr[i].link+`">Все программы</a>
+              </div>
+            </div>
+          </div>
+          }
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+</section>

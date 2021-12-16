@@ -1,0 +1,43 @@
+<section class="workout">
+  <div class="container">
+    <div class="workout_row">
+      <h2 class="title-block">Тренировки и обучение</h2>
+      <div class="title-bg">Learning</div>
+    </div>
+    <div class="workout_wrapper">
+      <div class="workout_slider">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            @@for (var i = 0; i < context.arr.length; i++) {
+            <div class="swiper-slide">
+              <div class="workout_box">
+                <img class="workout_img" src="`+context.arr[i].img+`">
+                <div class="workout_caption">`+context.arr[i].caption+`</div>
+                <div class="workout_number">`+context.arr[i].number+`</div>
+                <a class="workout_link" href="`+context.arr[i].link+`"></a>
+              </div>
+            </div>
+            }
+          </div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      <form class="workout_form">
+        <div class="workout_form_caption">Свяжитесь с нами</div>
+        <div class="workout_form_text">Вас зовут</div>
+        <input class="input" minlength="5" name="name" type="text" autocomplete="off" required>
+        <div class="workout_form_text">Контактный телефон</div>
+        <input class="input phone" minlength="10" name="phone" type="text" autocomplete="off" required>
+        <div class="workout_form_text">Ваш вопрос</div>
+        <textarea class="textarea" name="question"></textarea>
+        <label class="checkbox">
+          <input type="checkbox" name="confirm" required>
+          <div class="checkbox_text">Я согласен с политикой конфиденциальности и даю согласие на обработку персональных данных</div>
+        </label>
+        <button class="btn btn-form" type="submit">Отправить</button>
+      </form>
+    </div>
+  </div>
+</section>

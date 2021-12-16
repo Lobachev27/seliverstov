@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Дмитрий Селиверстов"
+})
+
+<body>
+<main class="main">
+
+  @@include("./components/sidebar.html")
+
+  @@include("./components/registration.html")
+
+  @@include("./components/header.html", {
+    context: {
+      "class": "main-page",
+    }
+  })
+
+  <div class="content">
+
+    @@include("./components/intro.html", {
+      context: {
+        arr: [
+          {"video": "./video/video.mp4", "videoSetting": "autoplay loop muted", "textLeft": "Двухкратный Абсолютный чемпион России", "textRight": "Чемпион Arnold Classic Amateur USA 2016", "caption": "Workout", "description": "Для тех, кто хочет двигаться вперед и изменить себя, подойдут индивидуально разработанные тренировочные программы и рационы питания, персональные тренировки и онлайн консультации.", "name": "Дмитрий Селиверстов", "description2": "Двухкратный Абсолютный чемпион России Чемпион Arnold Classic Amateur USA 2016", "link": "javascript:void(0);",},
+          {"video": "./video/video.mp4", "videoSetting": "", "textLeft": "Двухкратный Абсолютный чемпион России", "textRight": "Чемпион Arnold Classic Amateur USA 2016", "caption": "Workout", "description": "Для тех, кто хочет двигаться вперед и изменить себя, подойдут индивидуально разработанные тренировочные программы и рационы питания, персональные тренировки и онлайн консультации.", "name": "Дмитрий Селиверстов", "description2": "Двухкратный Абсолютный чемпион России Чемпион Arnold Classic Amateur USA 2016", "link": "javascript:void(0);",},
+          {"video": "./video/video.mp4", "videoSetting": "", "textLeft": "Двухкратный Абсолютный чемпион России", "textRight": "Чемпион Arnold Classic Amateur USA 2016", "caption": "Workout", "description": "Для тех, кто хочет двигаться вперед и изменить себя, подойдут индивидуально разработанные тренировочные программы и рационы питания, персональные тренировки и онлайн консультации.", "name": "Дмитрий Селиверстов", "description2": "Двухкратный Абсолютный чемпион России Чемпион Arnold Classic Amateur USA 2016", "link": "javascript:void(0);",},
+        ]
+      }
+    })
+
+    @@include("./components/article.html", {
+      context: {
+        arr: [
+          {"class": "fire", "img": "./img/article-1.jpg", "date": "08/04/2019", "typeClass": "news", "type": "новость", "caption": "Заголовок новости", "description": "Для тех, кто хочет двигаться вперед и изменить себя, подойдут индивидуально разработанные тренировочные программы и рационы питания, персональные тренировки и онлайн консультации.", "link": "javascript:void(0);",},
+          {"class": "", "img": "./img/article-2.jpg", "date": "08/04/2019", "typeClass": "advice", "type": "статья", "caption": "Заголовок новости", "description": "Для тех, кто хочет двигаться вперед и изменить себя, подойдут индивидуально разработанные тренировочные программы и рационы питания, персональные тренировки и онлайн консультации.", "link": "javascript:void(0);",},
+          {"class": "", "img": "./img/article-3.jpg", "date": "08/04/2019", "typeClass": "advice", "type": "статья", "caption": "Заголовок новости", "description": "Для тех, кто хочет двигаться вперед и изменить себя, подойдут индивидуально разработанные тренировочные программы и рационы питания, персональные тренировки и онлайн консультации.", "link": "javascript:void(0);",},
+        ]
+      }
+    })
+
+    @@include("./components/about.html")
+
+    @@include("./components/advantages.html", {
+      context: {
+        arr: [
+          {"number": "01", "caption": "Заголовок", "description": "Для тех, кто хочет двигаться вперед и изменить себя, подойдут индивидуально разработанные тренировочные программы и рационы питания, персональные тренировки и онлайн консультации.", "link": "javascript:void(0);",},
+          {"number": "02", "caption": "Заголовок", "description": "Для тех, кто хочет двигаться вперед и изменить себя, подойдут индивидуально разработанные тренировочные программы и рационы питания, персональные тренировки и онлайн консультации.", "link": "javascript:void(0);",},
+          {"number": "03", "caption": "Заголовок", "description": "Для тех, кто хочет двигаться вперед и изменить себя, подойдут индивидуально разработанные тренировочные программы и рационы питания, персональные тренировки и онлайн консультации.", "link": "javascript:void(0);",},
+          {"number": "04", "caption": "Заголовок", "description": "Для тех, кто хочет двигаться вперед и изменить себя, подойдут индивидуально разработанные тренировочные программы и рационы питания, персональные тренировки и онлайн консультации.", "link": "javascript:void(0);",},
+        ]
+      }
+    })
+
+    @@include("./components/programs.html")
+
+    @@include("./components/workout.html", {
+      context: {
+        arr: [
+          {"img": "./img/workout-1.jpg", "caption": "Ведение для жизни", "number": "01", "link": "javascript:void(0);",},
+          {"img": "./img/workout-2.jpg", "caption": "Ведение для соревнований", "number": "02", "link": "javascript:void(0);",},
+          {"img": "./img/workout-3.jpg", "caption": "Тренировки в группах по позированию", "number": "03", "link": "javascript:void(0);",},
+        ]
+      }
+    })
+
+    <section class="information">
+      <div class="container">
+
+        @@include("./components/instagram.html", {
+          context: {
+            arr: [
+              {"img": "./img/instagram-1.jpg", "like": "1 870", "comment": "30",},
+              {"img": "./img/instagram-2.jpg", "like": "1 770", "comment": "27",},
+              {"img": "./img/instagram-3.jpg", "like": "1 670", "comment": "24",},
+              {"img": "./img/instagram-4.jpg", "like": "1 570", "comment": "21",},
+              {"img": "./img/instagram-5.jpg", "like": "1 470", "comment": "18",},
+              {"img": "./img/instagram-6.jpg", "like": "1 370", "comment": "15",},
+            ]
+          }
+        })
+
+        @@include("./components/base.html", {
+          context: {
+          arr: ["./img/base-1.jpg", "./img/base-2.jpg", "./img/base-3.jpg", "./img/base-1.jpg", "./img/base-2.jpg", "./img/base-3.jpg",]
+          }
+        })
+
+      </div>
+    </section>
+
+  </div>
+
+  @@include("./components/footer.html")
+
+</main>
+
+@@include("./components/popup-instagram.html")
+
+@@include("./shared/script.html")
+</body>
+</html>

@@ -1,0 +1,374 @@
+@import "partials/params";
+@import "partials/mixins";
+
+/*Блок штаб*/
+
+.base{
+  position: relative;
+  width: 700px;
+  &_slider{
+    position: relative;
+    margin-top: 40px;
+    margin-left: -24px;
+    margin-bottom: 65px;
+    & .swiper-container{
+      position: relative;
+      padding: 0 25px;
+    }
+    & .swiper-button-next,
+    & .swiper-button-prev{
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      outline: none;
+      background: none;
+      background-color: #fff;
+      border: 1px solid #E2E2E2;
+      color: #E2E2E2;
+      top: 50%;
+      transition: all 0.3s;
+      &:hover{
+        color: #000;
+        transition: all 0.3s;
+      }
+      &:before{
+        content: '';
+        font-family: 'FontAwesome';
+        font-size: 22px;
+        font-weight: 900;
+        position: absolute;
+        top: 50%;
+      }
+    }
+    & .swiper-button-next{
+      right: -3px;
+      &:before{
+        content: '\f105';
+        right: 46%;
+        transform: translate(50%, -50%);
+      }
+    }
+    & .swiper-button-prev{
+      left: -3px;
+      &:before{
+        content: '\f104';
+        left: 46%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  &_item{
+    position: relative;
+    width: 100%;
+    height: 190px;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  &_link{
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  &_img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.contacts{
+  position: relative;
+  margin-top: 65px;
+  &_caption{
+    position: relative;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    margin-left: 35px;
+    &:before{
+      content: '';
+      position: absolute;
+      background: url("../img/contacts-icon.svg");
+      background-size: cover;
+      background-position: center;
+      left: -35px;
+      width: 22px;
+      height: 20px;
+    }
+  }
+  &_wrapper{
+    background-color: #fff;
+    border: 1px solid #F5F5F5;
+    border-radius: 16px;
+    box-shadow: 0 15px 18px rgba(0, 0, 0, 0.1);
+    padding: 14px 14px 25px;
+    margin-top: 30px;
+  }
+  &_map{
+    position: relative;
+    width: 100%;
+    height: 495px;
+    border-radius: 16px;
+    overflow: hidden;
+    &:before{
+      position: absolute;
+      content: '';
+      background-color: #f6f6f6;
+      width: 70px;
+      height: 25px;
+      left: 0;
+      bottom: 0;
+      border-radius: 0 10px 0 0;
+      z-index: 2;
+    }
+    &:after{
+      position: absolute;
+      content: '';
+      background-color: #f6f6f6;
+      width: 500px;
+      height: 12px;
+      right: 0;
+      bottom: 0;
+      border-radius: 10px 0 0 0;
+      z-index: 2;
+    }
+  }
+  &_info{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 30px;
+  }
+  &_text{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.5em;
+    padding: 0 60px;
+    &:first-child{
+      &:before{
+        position: absolute;
+        content: '\f041';
+        font-family: 'FontAwesome';
+        color: $color-orange;
+        font-size: 26px;
+        left: 25px;
+      }
+    }
+    &:last-child{
+      text-align: right;
+    }
+  }
+}
+
+.marker{
+  &_info{
+    max-width: 250px;
+    & p{
+      font-size: 12px;
+      line-height: 1.5em;
+      color: $color-grey;
+    }
+  }
+  &_name{
+    font-weight: 700;
+    font-size: 16px;
+    color: $text-color-main;
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  /*Блок штаб (max-width: 1919px)*/
+
+  .base{
+    width: 100%;
+    margin-top: 80px;
+    &_slider{
+      margin-top: 30px;
+      margin-left: 0;
+      margin-bottom: 50px;
+      & .swiper-container{
+        padding: 0 24px;
+      }
+    }
+    &_item{
+      height: 300px;
+    }
+  }
+
+  .contacts{
+    margin-top: 50px;
+    &_wrapper{
+      background-color: #fff;
+      border: 1px solid #F5F5F5;
+      border-radius: 16px;
+      box-shadow: 0 15px 18px rgba(0, 0, 0, 0.1);
+      padding: 14px 14px 25px;
+      margin-top: 30px;
+    }
+    &_map{
+      height: 420px;
+    }
+    &_info{
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 30px;
+    }
+    &_text{
+      font-size: 14px;
+      padding: 0 50px;
+      &:first-child{
+        &:before{
+          left: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1499px) {
+  /*Блок штаб (max-width: 1499px)*/
+
+  .base{
+    margin-top: 60px;
+    &_slider{
+      margin-top: 20px;
+      margin-bottom: 40px;
+      & .swiper-container{
+        padding: 0 24px;
+      }
+    }
+    &_item{
+      height: 250px;
+    }
+  }
+
+  .contacts{
+    margin-top: 40px;
+    &_wrapper{
+      padding: 12px 12px 20px;
+      margin-top: 20px;
+    }
+    &_map{
+      height: 370px;
+    }
+    &_info{
+      margin-top: 20px;
+    }
+    &_text{
+      font-size: 14px;
+      padding: 0 50px;
+      &:first-child{
+        &:before{
+          left: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1249px) {
+  /*Блок штаб (max-width: 1249px)*/
+
+  .base{
+    &_item{
+      height: 180px;
+    }
+  }
+
+  .contacts{
+    margin-top: 40px;
+    &_wrapper{
+      padding: 12px 12px 20px;
+      margin-top: 20px;
+    }
+    &_map{
+      height: 320px;
+    }
+    &_info{
+      margin-top: 20px;
+    }
+    &_text{
+      font-size: 14px;
+      padding: 0 50px;
+      &:first-child{
+        &:before{
+          left: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /*Блок штаб (max-width: 767px)*/
+
+  .base{
+    &_item{
+      height: 220px;
+    }
+  }
+
+  .contacts{
+    margin-top: 40px;
+    &_caption{
+      font-size: 18px;
+    }
+    &_wrapper{
+      padding: 0 0 20px;
+      margin-top: 20px;
+    }
+    &_map{
+      height: 320px;
+      border-radius: 16px 16px 0 0;
+    }
+    &_info{
+      margin-top: 20px;
+    }
+    &_text{
+      font-size: 14px;
+      padding: 0 15px 0 35px;
+      &:first-child{
+        &:before{
+          left: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  /*Блок штаб (max-width: 575px)*/
+
+  .base{
+    &_slider{
+      width: 570px;
+      & .swiper-button-next{
+        right: initial;
+        left: 245px;
+      }
+    }
+    &_item{
+      height: 180px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /*Блок штаб (max-width: 480px)*/
+
+  .contacts{
+    &_info{
+      display: block;
+    }
+    &_text{
+      font-size: 13px;
+      &:last-child{
+        text-align: left;
+      }
+    }
+  }
+}

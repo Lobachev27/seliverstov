@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Блог"
+})
+
+<body>
+<main class="main">
+
+  @@include("./components/sidebar.html")
+
+  @@include("./components/registration.html")
+
+  @@include("./components/header.html", {
+    context: {
+      "class": "",
+    }
+  })
+
+  <div class="content">
+    <section class="page_leader">
+      <div class="container">
+        <div class="page_way">
+          <a class="page_way_link" href="/">Главная</a>
+          <span>/</span>
+          <p class="page_way_link">Блог</p>
+        </div>
+        <h1 class="title-article">Блог</h1>
+      </div>
+    </section>
+    <section class="article-list">
+      <div class="container">
+        <div class="article-list_row">
+          <div class="article-list_text">Показывать:</div>
+          <nav class="article-list_nav">
+            <a class="article-list_item active" href="#all">Все</a>
+            <a class="article-list_item" href="#articles">Статьи</a>
+            <a class="article-list_item" href="#news">Новости</a>
+            <a class="article-list_item" href="#stock">Акции</a>
+          </nav>
+        </div>
+
+        @@include("./components/article-list.html", {
+          context: {
+            "id": "all",
+            arr: [
+              {"class": "", "img": "./img/blog-1.jpg", "markerClass": "fire", "date": "8 апреля 2019", "type": "Новость", "caption": "Заголовок новости", "description": "Для тех, кто хочет двигаться вперед и изменить себя, подойдут индивидуально разработанные тренировочные программы и рационы питания, персональные тренировки и онлайн консультации.", "link": "article-page.html",},
+              {"class": "right", "img": "./img/blog-2.jpg", "markerClass": "", "date": "8 апреля 2019", "type": "Новость", "caption": "Заголовок новости", "description": "Для тех, кто хочет двигаться вперед и изменить себя, подойдут индивидуально разработанные тренировочные программы и рационы питания, персональные тренировки и онлайн консультации.", "link": "article-page.html",},
+              {"class": "", "img": "./img/blog-3.jpg", "markerClass": "", "date": "8 апреля 2019", "type": "Новость", "caption": "Заголовок новости", "description": "Для тех, кто хочет двигаться вперед и изменить себя, подойдут индивидуально разработанные тренировочные программы и рационы питания, персональные тренировки и онлайн консультации.", "link": "article-page.html",},
+              {"class": "right", "img": "./img/blog-4.jpg", "markerClass": "", "date": "8 апреля 2019", "type": "Новость", "caption": "Заголовок новости", "description": "Для тех, кто хочет двигаться вперед и изменить себя, подойдут индивидуально разработанные тренировочные программы и рационы питания, персональные тренировки и онлайн консультации.", "link": "article-page.html",},
+              {"class": "", "img": "./img/blog-5.jpg", "markerClass": "", "date": "8 апреля 2019", "type": "Новость", "caption": "Заголовок новости", "description": "Для тех, кто хочет двигаться вперед и изменить себя, подойдут индивидуально разработанные тренировочные программы и рационы питания, персональные тренировки и онлайн консультации.", "link": "article-page.html",},
+              {"class": "right", "img": "./img/blog-2.jpg", "markerClass": "", "date": "8 апреля 2019", "type": "Новость", "caption": "Заголовок новости", "description": "Для тех, кто хочет двигаться вперед и изменить себя, подойдут индивидуально разработанные тренировочные программы и рационы питания, персональные тренировки и онлайн консультации.", "link": "article-page.html",},
+            ]
+          }
+        })
+
+        <div id="articles" class="article-list_wrapper"></div>
+        <div id="news" class="article-list_wrapper"></div>
+        <div id="stock" class="article-list_wrapper"></div>
+      </div>
+    </section>
+  </div>
+
+  @@include("./components/footer.html")
+
+</main>
+
+@@include("./components/popup-instagram.html")
+
+@@include("./shared/script.html")
+</body>
+</html>

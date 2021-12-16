@@ -1,0 +1,98 @@
+<div id="registration" class="registration">
+  <div class="container">
+    <div class="header_logo">
+      <a class="header_logo_link" href="./">
+        <div class="header_logo_text">Дмитрий Селиверстов</div>
+        <img class="header_logo_img" src="./img/logo-min.svg" alt="Дмитрий Селиверстов" title="Дмитрий Селиверстов">
+      </a>
+    </div>
+  </div>
+  <div class="registration_close"></div>
+  <div class="registration_caption">Заполнение анкеты</div>
+  <div class="registration_description">Все поля необходимы для заполнения</div>
+  <div class="registration_description_mobile">Шаг 1 из 2</div>
+  <form class="registration_form">
+    <div class="registration_left">
+      <div class="registration_text">Как Вас зовут?</div>
+      <input class="input registration_input" minlength="5" name="name" type="text" placeholder="Иванов Иван" autocomplete="off" required>
+      <div class="registration_text">Ваш пол</div>
+      <div class="registration_row two">
+        <label class="radio">
+          <input type="radio" name="gender" required checked>
+          <div class="radio_text">Мужской</div>
+        </label>
+        <label class="radio">
+          <input type="radio" name="gender" required>
+          <div class="radio_text">Женский</div>
+        </label>
+      </div>
+      <div class="registration_text">Ваш возраст</div>
+      <div class="inputDiv" data-value="39" data-min="14" data-max="99" id="i0"></div>
+      <div class="registration_text">Ваш вес</div>
+      <div class="inputDiv" data-value="85" data-min="40" data-max="120" id="i1"></div>
+      <div class="registration_text">Ваш рост</div>
+      <div class="inputDiv" data-value="130" data-min="130" data-max="200" id="i2"></div>
+      <label class="checkbox_registration">
+        <input type="checkbox" name="confirm" required>
+        <div class="checkbox_registration_text">Я согласен с политикой конфиденциальности и даю согласие на обработку персональных данных</div>
+      </label>
+      <div class="registration_next">Далее</div>
+    </div>
+    <div class="registration_right">
+      <div class="registration_text">Опыт занятий спортом (достижения)</div>
+      <input class="input registration_input" minlength="3" name="sport" type="text" placeholder="КМС по боксу, тренер по бальным танцам" autocomplete="off" required>
+      <div class="registration_text">Образ жизни</div>
+      <div class="registration_row three">
+        <label class="radio">
+          <input type="radio" name="life" required checked>
+          <div class="radio_text">Активный</div>
+        </label>
+        <label class="radio">
+          <input type="radio" name="life" required>
+          <div class="radio_text">Пассивный</div>
+        </label>
+        <label class="radio">
+          <input type="radio" name="life" required>
+          <div class="radio_text">Умеренный</div>
+        </label>
+      </div>
+      <div class="registration_text">Сколько раз в неделю тренируетесь?</div>
+      <div class="inputDiv" data-value="3" data-min="0" data-max="14" id="i3"></div>
+      <div class="registration_text">Медицинские противопоказания</div>
+      <div class="registration_row three">
+        <label class="radio">
+          <input type="radio" name="medical" required checked>
+          <div class="radio_text">Не имею</div>
+        </label>
+        <label class="radio">
+          <input type="radio" name="medical" required>
+          <div class="radio_text">Аллергия</div>
+        </label>
+        <label class="radio">
+          <input type="radio" name="medical" required>
+          <div class="radio_text">Ограничения</div>
+        </label>
+      </div>
+      <div class="registration_text">Ваша цель</div>
+      <div class="registration_row two">
+        <label class="radio">
+          <input type="radio" name="target" required checked>
+          <div class="radio_text">Набрать массу</div>
+        </label>
+        <label class="radio">
+          <input type="radio" name="target" required>
+          <div class="radio_text">Убрать лишний вес</div>
+        </label>
+        <label class="radio">
+          <input type="radio" name="target" required>
+          <div class="radio_text">Сушка</div>
+        </label>
+        <label class="radio">
+          <input type="radio" name="target" required>
+          <div class="radio_text">Выступления</div>
+        </label>
+      </div>
+      <button class="btn btn-registration" type="submit">Отправить анкету</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Каталог"
+})
+
+<body>
+<main class="main">
+
+  @@include("./components/sidebar.html")
+
+  @@include("./components/registration.html")
+
+  @@include("./components/header.html", {
+    context: {
+      "class": "",
+    }
+  })
+
+  <div class="content">
+    <section class="page_leader">
+      <div class="container">
+        <div class="page_way">
+          <a class="page_way_link" href="/">Главная</a>
+          <span>/</span>
+          <p class="page_way_link">Продукция</p>
+        </div>
+        <h1 class="title-article">Каталог</h1>
+      </div>
+    </section>
+    <section class="categories">
+      <div class="container">
+        <div class="categories_box left">
+          <img class="categories_box_img" src="./img/categories-1.jpg">
+          <div class="categories_box_name">Мужская одежда</div>
+          <a class="categories_box_link" href="catalog_level_2.html"></a>
+        </div>
+        <div class="categories_box top">
+          <img class="categories_box_img" src="./img/categories-2.jpg">
+          <div class="categories_box_name">Аксессуары</div>
+          <a class="categories_box_link" href="catalog_level_2.html"></a>
+        </div>
+        <div class="categories_box bottom">
+          <img class="categories_box_img" src="./img/categories-3.jpg">
+          <div class="categories_box_name">Спортивный инвентарь</div>
+          <a class="categories_box_link" href="catalog_level_2.html"></a>
+        </div>
+        <div class="categories_box right">
+          <img class="categories_box_img" src="./img/categories-4.jpg">
+          <div class="categories_box_name">Женская одежда</div>
+          <a class="categories_box_link" href="catalog_level_2.html"></a>
+        </div>
+      </div>
+    </section>
+
+    @@include("./components/article-page-blog.html", {
+      context: {
+        arr: [
+          {"class": "fire", "img": "./img/article-1.jpg", "date": "08/04/2019", "typeClass": "news", "type": "новость", "caption": "Заголовок новости", "description": "Для тех, кто хочет двигаться вперед и изменить себя, подойдут индивидуально разработанные тренировочные программы и рационы питания, персональные тренировки и онлайн консультации.", "link": "javascript:void(0);",},
+          {"class": "", "img": "./img/article-2.jpg", "date": "08/04/2019", "typeClass": "advice", "type": "статья", "caption": "Заголовок новости", "description": "Для тех, кто хочет двигаться вперед и изменить себя, подойдут индивидуально разработанные тренировочные программы и рационы питания, персональные тренировки и онлайн консультации.", "link": "javascript:void(0);",},
+          {"class": "", "img": "./img/article-3.jpg", "date": "08/04/2019", "typeClass": "advice", "type": "статья", "caption": "Заголовок новости", "description": "Для тех, кто хочет двигаться вперед и изменить себя, подойдут индивидуально разработанные тренировочные программы и рационы питания, персональные тренировки и онлайн консультации.", "link": "javascript:void(0);",},
+        ]
+      }
+    })
+
+  </div>
+
+  @@include("./components/footer.html")
+
+</main>
+
+@@include("./components/popup-instagram.html")
+
+@@include("./shared/script.html")
+</body>
+</html>

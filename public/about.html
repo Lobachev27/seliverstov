@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Биография</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/latest/normalize.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;subset=cyrillic"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/swiper.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+  </head>
+
+  <body>
+    <main class="main">
+      <aside class="sidebar">
+        <div class="container">
+          <div class="header_logo">
+            <a class="header_logo_link" href="./">
+              <div class="header_logo_text">Дмитрий Селиверстов</div>
+              <img
+                class="header_logo_img"
+                src="./img/logo-min.svg"
+                alt="Дмитрий Селиверстов"
+                title="Дмитрий Селиверстов"
+              />
+            </a>
+          </div>
+          <div class="header_close"></div>
+        </div>
+        <div class="sidebar_logo">
+          <a class="sidebar_logo_link" href="./">
+            <img
+              class="sidebar_logo_img"
+              src="./img/logo.svg"
+              alt="Дмитрий Селиверстов"
+              title="Дмитрий Селиверстов"
+            />
+          </a>
+        </div>
+        <nav class="sidebar_nav">
+          <a class="sidebar_nav_link" href="about.html">Биография</a>
+          <a class="sidebar_nav_link" href="article.html">Блог</a>
+          <a class="sidebar_nav_link" href="javascript:void(0);">Клуб</a>
+          <a class="sidebar_nav_link" href="catalog_level_1.html">Продукция</a>
+          <a class="sidebar_nav_link" href="programs.html">Программы</a>
+          <a class="sidebar_nav_link" href="javascript:void(0);">Услуги</a>
+        </nav>
+        <div class="sidebar_basket">
+          <div class="sidebar_basket_text">Ваша корзина</div>
+          <div class="sidebar_basket_img">
+            <div class="sidebar_basket_count">0</div>
+            <div class="sidebar_basket_price">товаров на сумму 0 р.</div>
+          </div>
+          <a class="sidebar_basket_link" href="javascript:void(0);"></a>
+        </div>
+        <div class="sidebar_request">
+          <div class="sidebar_request_text">Онлайн-ведение</div>
+          <a class="btn btn-sidebar" href="#registration">Заполнить анкету</a>
+          <a class="btn btn-call" href="javascript:void(0);">Обратная связь</a>
+        </div>
+        <div class="sidebar_social">
+          <div class="sidebar_social_text">Подпишитесь</div>
+          <div class="sidebar_social_list">
+            <a class="sidebar_social_item vk" href="javascript:void(0);"></a>
+            <a
+              class="sidebar_social_item facebook"
+              href="javascript:void(0);"
+            ></a>
+            <a
+              class="sidebar_social_item instagram"
+              href="javascript:void(0);"
+            ></a>
+            <a
+              class="sidebar_social_item youtube"
+              href="javascript:void(0);"
+            ></a>
+          </div>
+        </div>
+      </aside>
+
+      <div id="registration" class="registration">
+        <div class="container">
+          <div class="header_logo">
+            <a class="header_logo_link" href="./">
+              <div class="header_logo_text">Дмитрий Селиверстов</div>
+              <img
+                class="header_logo_img"
+                src="./img/logo-min.svg"
+                alt="Дмитрий Селиверстов"
+                title="Дмитрий Селиверстов"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="registration_close"></div>
+        <div class="registration_caption">Заполнение анкеты</div>
+        <div class="registration_description">
+          Все поля необходимы для заполнения
+        </div>
+        <div class="registration_description_mobile">Шаг 1 из 2</div>
+        <form class="registration_form">
+          <div class="registration_left">
+            <div class="registration_text">Как Вас зовут?</div>
+            <input
+              class="input registration_input"
+              minlength="5"
+              name="name"
+              type="text"
+              placeholder="Иванов Иван"
+              autocomplete="off"
+              required
+            />
+            <div class="registration_text">Ваш пол</div>
+            <div class="registration_row two">
+              <label class="radio">
+                <input type="radio" name="gender" required checked />
+                <div class="radio_text">Мужской</div>
+              </label>
+              <label class="radio">
+                <input type="radio" name="gender" required />
+                <div class="radio_text">Женский</div>
+              </label>
+            </div>
+            <div class="registration_text">Ваш возраст</div>
+            <div
+              class="inputDiv"
+              data-value="39"
+              data-min="14"
+              data-max="99"
+              id="i0"
+            ></div>
+            <div class="registration_text">Ваш вес</div>
+            <div
+              class="inputDiv"
+              data-value="85"
+              data-min="40"
+              data-max="120"
+              id="i1"
+            ></div>
+            <div class="registration_text">Ваш рост</div>
+            <div
+              class="inputDiv"
+              data-value="130"
+              data-min="130"
+              data-max="200"
+              id="i2"
+            ></div>
+            <label class="checkbox_registration">
+              <input type="checkbox" name="confirm" required />
+              <div class="checkbox_registration_text">
+                Я согласен с политикой конфиденциальности и даю согласие на
+                обработку персональных данных
+              </div>
+            </label>
+            <div class="registration_next">Далее</div>
+          </div>
+          <div class="registration_right">
+            <div class="registration_text">
+              Опыт занятий спортом (достижения)
+            </div>
+            <input
+              class="input registration_input"
+              minlength="3"
+              name="sport"
+              type="text"
+              placeholder="КМС по боксу, тренер по бальным танцам"
+              autocomplete="off"
+              required
+            />
+            <div class="registration_text">Образ жизни</div>
+            <div class="registration_row three">
+              <label class="radio">
+                <input type="radio" name="life" required checked />
+                <div class="radio_text">Активный</div>
+              </label>
+              <label class="radio">
+                <input type="radio" name="life" required />
+                <div class="radio_text">Пассивный</div>
+              </label>
+              <label class="radio">
+                <input type="radio" name="life" required />
+                <div class="radio_text">Умеренный</div>
+              </label>
+            </div>
+            <div class="registration_text">
+              Сколько раз в неделю тренируетесь?
+            </div>
+            <div
+              class="inputDiv"
+              data-value="3"
+              data-min="0"
+              data-max="14"
+              id="i3"
+            ></div>
+            <div class="registration_text">Медицинские противопоказания</div>
+            <div class="registration_row three">
+              <label class="radio">
+                <input type="radio" name="medical" required checked />
+                <div class="radio_text">Не имею</div>
+              </label>
+              <label class="radio">
+                <input type="radio" name="medical" required />
+                <div class="radio_text">Аллергия</div>
+              </label>
+              <label class="radio">
+                <input type="radio" name="medical" required />
+                <div class="radio_text">Ограничения</div>
+              </label>
+            </div>
+            <div class="registration_text">Ваша цель</div>
+            <div class="registration_row two">
+              <label class="radio">
+                <input type="radio" name="target" required checked />
+                <div class="radio_text">Набрать массу</div>
+              </label>
+              <label class="radio">
+                <input type="radio" name="target" required />
+                <div class="radio_text">Убрать лишний вес</div>
+              </label>
+              <label class="radio">
+                <input type="radio" name="target" required />
+                <div class="radio_text">Сушка</div>
+              </label>
+              <label class="radio">
+                <input type="radio" name="target" required />
+                <div class="radio_text">Выступления</div>
+              </label>
+            </div>
+            <button class="btn btn-registration" type="submit">
+              Отправить анкету
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <header class="header">
+        <div class="container">
+          <div class="header_logo">
+            <a class="header_logo_link" href="./">
+              <div class="header_logo_text">Дмитрий Селиверстов</div>
+              <img
+                class="header_logo_img"
+                src="./img/logo-min.svg"
+                alt="Дмитрий Селиверстов"
+                title="Дмитрий Селиверстов"
+              />
+            </a>
+          </div>
+          <div class="header_basket">
+            <div class="header_basket_img">
+              <div class="header_basket_count">0</div>
+            </div>
+            <a class="header_basket_link" href="javascript:void(0);"></a>
+          </div>
+          <div class="header_hamburger"></div>
+        </div>
+      </header>
+
+      <div class="content">
+        <section class="about-intro">
+          <div class="container">
+            <div class="page_way">
+              <a class="page_way_link" href="/">Главная</a>
+              <span>/</span>
+              <p class="page_way_link">Биография</p>
+            </div>
+            <h1 class="title-about">Тренер чемпионов. Бодибилдер. Продюсер.</h1>
+          </div>
+        </section>
+        <section class="about-content">
+          <h2 class="about-content_caption">Кто такой Дмитрий Селиверстов?</h2>
+          <div class="about-content_video">
+            <video class="about-content_video_box" controls>
+              <source src="./img/video.mp4" type="video/mp4" />
+            </video>
+            <button class="about-content_video_btn" type="button"></button>
+          </div>
+          <div class="about-content_description">
+            <p>
+              Дмитрий Селивёрстов родом из Ульяновска. Он родился в 1982 году.
+              Его биография лишний раз подтверждает, что семья – это начало всех
+              начал. Будущее, которое начинается, когда шестилетний идешь с
+              отцом на тренировку по дзюдо и самбо. А потом вместе с
+              одноклассниками не пропускаешь тренировки в футбольной секции,
+              потом в большом теннисе или по легкой атлетике. Определяться в
+              жизни Дмитрию пришлось не раз. Например, в 16 лет Селивёрстов
+              поступает в Академию ФСБ, через девять лет была Дипломатическая
+              академия МИД РФ.
+            </p>
+            <br />
+            <p>
+              И вдруг в 2015 году в бодибилдинге появился неизвестно откуда
+              никому не знакомый абсолютный чемпион России и Восточной Европы по
+              бодибилдингу в номинации «Пляжный бодибилдинг» Дмитрий
+              Селивёрстов:
+            </p>
+            <br />
+            <ul>
+              <li>первое место на «Алекс-фитнес – 2015»;</li>
+              <li>
+                первое место на Открытом кубке СЗФО, абсолютный победитель
+                кубка;
+              </li>
+              <li>
+                первое место на Кубке России/Восточной Европы «Самсон-38»;
+              </li>
+              <li>абсолютный победитель Кубка Яшанькина – 2015;</li>
+              <li>
+                победитель «Арнольд классик – 2016» в номинации Men’s Physique.
+              </li>
+            </ul>
+            <br />
+            <p>
+              Организаторские способности и желание сделать мир вокруг лучше, а
+              также медийная известность после столь впечатляющих побед
+              способствовали Дмитрию в создании проекта, который объединил сотни
+              людей пока в 20 городах страны на почве здоровья и спорта. Люди
+              выходят на свежий воздух выполнить программу тренировок, которая
+              доступна любому, – добровольно, безвозмездно, безгранично.
+            </p>
+            <br />
+            <p>
+              А Дмитрий ездит по стране и дает мастер-класс – на 21 день
+              организует людей на ежедневные тренировки. По поводу названия
+              проекта. Когда-то, когда Дмитрий отпустил бороду в русском стиле
+              (и стал первым абсолютным чемпионом с бородой), ему дали прозвище
+              Император за сходство с Николаем II.
+            </p>
+            <br />
+            <p>
+              А воля – ее каждый должен разбудить в себе, если она спит. Или
+              проявить ее в этот 21 день тренировок, чтобы закончить цикл. Хотя
+              тут нет обязаловки. Человек может в любое время отказаться от
+              занятий. Императорский класс собирает от 100 до 150 человек. Людям
+              нравится. И впереди еще много задумок по развитию проекта.
+            </p>
+          </div>
+          <div class="about-content_slider">
+            <div class="about-content_slider_caption">СМИ и медиа</div>
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a class="brands_link" href="javascript:void(0);">
+                    <img class="brands_img" src="./img/brands-1.svg" />
+                  </a>
+                  <div class="brands_description">
+                    Учатие в утренней программе «Название программы»
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <a class="brands_link" href="javascript:void(0);">
+                    <img class="brands_img" src="./img/brands-2.svg" />
+                  </a>
+                  <div class="brands_description">
+                    Учатие в утренней программе «Название программы»
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <a class="brands_link" href="javascript:void(0);">
+                    <img class="brands_img" src="./img/brands-3.svg" />
+                  </a>
+                  <div class="brands_description">
+                    Учатие в утренней программе «Название программы»
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </section>
+      </div>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer_left">
+            <div class="footer_logo">
+              <a class="footer_logo_link" href="./">
+                <img
+                  class="footer_logo_img"
+                  src="./img/logo-white.svg"
+                  alt="Дмитрий Селиверстов"
+                  title="Дмитрий Селиверстов"
+                />
+              </a>
+            </div>
+            <div class="footer_text">
+              Любое копирование материалов или их использование возможно только
+              с разрешением их владельца.
+            </div>
+            <div class="footer_copyright">© 2019. ИП Селиверстов Д.И.</div>
+          </div>
+          <nav class="footer_nav">
+            <a class="footer_nav_link" href="about.html">Биография</a>
+            <a class="footer_nav_link" href="article.html">Блог</a>
+            <a class="footer_nav_link" href="javascript:void(0);">СМИ</a>
+            <a class="footer_nav_link" href="javascript:void(0);">Партнеры</a>
+            <a class="footer_nav_link" href="javascript:void(0);">Галерея</a>
+          </nav>
+          <nav class="footer_nav">
+            <a class="footer_nav_link" href="javascript:void(0);">Программы</a>
+            <a class="footer_nav_link subcategory" href="javascript:void(0);"
+              >Программа 1</a
+            >
+            <a class="footer_nav_link subcategory" href="javascript:void(0);"
+              >Программа 2</a
+            >
+            <a class="footer_nav_link subcategory" href="javascript:void(0);"
+              >Программа 3</a
+            >
+            <a class="footer_nav_link subcategory" href="javascript:void(0);"
+              >Программа 4</a
+            >
+          </nav>
+          <nav class="footer_nav">
+            <a class="footer_nav_link" href="javascript:void(0);">Услуги</a>
+            <a class="footer_nav_link subcategory" href="javascript:void(0);"
+              >Ведение</a
+            >
+            <a class="footer_nav_link subcategory" href="javascript:void(0);"
+              >Позирование</a
+            >
+            <a class="footer_nav_link subcategory" href="javascript:void(0);"
+              >Тренировки</a
+            >
+            <a class="footer_nav_link subcategory" href="javascript:void(0);"
+              >Онлайн-ведение</a
+            >
+          </nav>
+          <nav class="footer_nav">
+            <a class="footer_nav_link" href="javascript:void(0);">Продукция</a>
+            <a class="footer_nav_link subcategory" href="javascript:void(0);"
+              >Категория 1</a
+            >
+            <a class="footer_nav_link subcategory" href="javascript:void(0);"
+              >Категория 2</a
+            >
+            <a class="footer_nav_link subcategory" href="javascript:void(0);"
+              >Категория 3</a
+            >
+            <a class="footer_nav_link subcategory" href="javascript:void(0);"
+              >Категория 4</a
+            >
+          </nav>
+          <div class="footer_right">
+            <a class="footer_mail" href="info@seliverstov.rocks"
+              >info@seliverstov.rocks</a
+            >
+            <div class="footer_social_list">
+              <a class="footer_social_item vk" href="javascript:void(0);"></a>
+              <a
+                class="footer_social_item facebook"
+                href="javascript:void(0);"
+              ></a>
+              <a
+                class="footer_social_item instagram"
+                href="javascript:void(0);"
+              ></a>
+              <a
+                class="footer_social_item youtube"
+                href="javascript:void(0);"
+              ></a>
+            </div>
+            <div class="footer_develop">
+              Создание сайта:
+              <a class="footer_develop_link" href="http://champer.ru/"
+                >Digital agency Champer</a
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <div id="instagramModal" class="modalDialog">
+      <div class="modalDialog_container mid">
+        <div
+          title="Закрыть"
+          class="closeModal"
+          onclick="close_modal('instagramModal')"
+        ></div>
+        <div class="instagram-modal_img_wrapper">
+          <img class="instagram-modal_img" src="./img/instagram-3.jpg" />
+        </div>
+        <div class="instagram-modal_info">
+          <div class="instagram-modal_row">
+            <div class="instagram-modal_user">
+              <img class="instagram-modal_user_img" src="./img/coach.jpg" />
+              <a class="instagram-modal_user_name" href="javascript:void(0);"
+                >Seliverstov</a
+              >
+            </div>
+            <a class="instagram-modal_view" href="javascript:void(0);"
+              >View on Instagram</a
+            >
+          </div>
+          <div class="instagram-modal_row">
+            <div class="instagram-modal_popularity">
+              <div class="instagram-modal_like">142</div>
+              <div class="instagram-modal_comment">4</div>
+            </div>
+            <div class="instagram-modal_time">2 d</div>
+          </div>
+          <div class="instagram-modal_messages">
+            <div class="instagram-modal_messages_item author">
+              <a
+                class="instagram-modal_messages_name author"
+                href="javascript:void(0);"
+                >Seliverstov</a
+              >
+              <div class="instagram-modal_messages_text author">
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                blanditiis praesentium voluptatum deleniti atque corrupti quos
+                dolores et quas molestias excepturi sint occaecati cupiditate
+                non provident, similique sunt in culpa qui officia deserunt
+                mollitia animi, id est laborum et dolorum fuga. Et harum quidem
+                rerum facilis est et expedita distinctio. Nam libero tempore,
+                cum soluta nobis est eligendi optio cumque nihil impedit quo
+                minus id quod maxime placeat facere possimus, omnis voluptas
+                assumenda est, omnis dolor repellendus. Temporibus autem
+                quibusdam et aut officiis debitis aut rerum necessitatibus saepe
+                eveniet ut et voluptates repudiandae sint et molestiae non
+                recusandae. Itaque earum rerum hic tenetur a sapiente delectus,
+                ut aut reiciendis voluptatibus maiores alias consequatur aut
+                perferendis doloribus asperiores repellat.
+              </div>
+              <a
+                class="instagram-modal_messages_hashtag author"
+                href="javascript:void(0);"
+              ></a>
+              <a
+                class="instagram-modal_messages_hashtag author"
+                href="javascript:void(0);"
+              ></a>
+            </div>
+            <div class="instagram-modal_messages_item">
+              <a
+                class="instagram-modal_messages_name"
+                href="javascript:void(0);"
+                >user_481</a
+              >
+              <div class="instagram-modal_messages_text">
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                blanditiis
+              </div>
+              <a
+                class="instagram-modal_messages_hashtag"
+                href="javascript:void(0);"
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="./js/swiper.js"></script>
+    <script src="./js/lightbox.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAx5dDXcu4v27Wepf3CQUYJsTqqRfeNsIY"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<section class="intro">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      @@for (var i = 0; i < context.arr.length; i++) {
+      <div class="swiper-slide">
+        <video class="intro_video" `+context.arr[i].videoSetting+`>
+          <source src="`+context.arr[i].video+`" type="video/mp4">
+        </video>
+        <div class="intro_video_text left">`+context.arr[i].textLeft+`</div>
+        <div class="intro_video_text right">`+context.arr[i].textRight+`</div>
+        <div class="container">
+          <div class="intro_info">
+            <h1 class="intro_caption">`+context.arr[i].caption+`</h1>
+            <div class="intro_description">`+context.arr[i].description+`</div>
+            <a class="btn btn-intro" href="`+context.arr[i].link+`">Подробнее</a>
+          </div>
+          <div class="intro_coach">
+            <div class="intro_coach_name">`+context.arr[i].name+`</div>
+            <div class="intro_coach_description">`+context.arr[i].description2+`</div>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+  <div class="intro_request">
+    <a class="btn btn-sidebar" href="#registration">Заполнить анкету</a>
+    <a class="btn btn-call" href="javascript:void(0);">Обратная связь</a>
+  </div>
+</section>
